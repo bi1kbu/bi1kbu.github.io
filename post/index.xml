@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 望远山而前行 - 王诗文的博客</title>
+        <link>https://bi1kbu.github.io/post/</link>
+        <description>Recent content in Posts on 望远山而前行 - 王诗文的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用GithubPages部署上线</title>
+        <link>https://bi1kbu.github.io/p/hugo-launch/</link>
+        <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://bi1kbu.github.io/p/hugo-launch/</guid>
+        <description>&lt;img src="https://bi1kbu.github.io/p/hugo-launch/wx_20230312184348.png" alt="Featured image of post 使用GithubPages部署上线" /&gt;&lt;h2 id=&#34;基本流程&#34;&gt;基本流程&lt;/h2&gt;
+&lt;p&gt;创建一个GithubPages仓库
+将仓库拉到本地
+添加静态网页文件添加到本地仓库
+提交到github仓库
+　&lt;/p&gt;
+&lt;h2 id=&#34;创建githubpages仓库&#34;&gt;创建GithubPages仓库&lt;/h2&gt;
+&lt;p&gt;新建一个public仓库，并命名为&lt;code&gt;username.github.io&lt;/code&gt;，其中username指github账户名。&lt;/p&gt;
+&lt;p&gt;GitHub Pages 项目需要符合 username.github.io 的特殊命名格式，如果仓库名和账户名没有完全匹配的话，网站就不能运行，所以一定要保证完全匹配。&lt;/p&gt;
+&lt;h2 id=&#34;将仓库拉到本地&#34;&gt;将仓库拉到本地&lt;/h2&gt;
+&lt;p&gt;在你希望的目录位置，用下面的命令将新建的远程仓库拉到本地。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone https://github.com/username/username.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;添加静态网页文件添加到本地仓库&#34;&gt;添加静态网页文件添加到本地仓库&lt;/h2&gt;
+&lt;p&gt;将hugo生成的public/目录下所有文件，复制到本地仓库，&lt;/p&gt;
+&lt;h2 id=&#34;提交到github仓库&#34;&gt;提交到github仓库&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;git push -u origin main&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Hugo博客美化（未完）</title>
+        <link>https://bi1kbu.github.io/p/hugo-development/</link>
+        <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://bi1kbu.github.io/p/hugo-development/</guid>
+        <description>&lt;img src="https://bi1kbu.github.io/p/hugo-development/wx_20230312184348.png" alt="Featured image of post Hugo博客美化（未完）" /&gt;&lt;h2 id=&#34;前期计划&#34;&gt;前期计划&lt;/h2&gt;
+&lt;p&gt;　&lt;/p&gt;
+&lt;h2 id=&#34;去除国际化&#34;&gt;去除国际化&lt;/h2&gt;
+&lt;p&gt;　　因为我的外文确实不咋地，而且也没打算让我的博客写出国，更多的还是自己留着慢慢总结积累，万一用得上呢(bushi&lt;br&gt;
+　　首先在根目录下的配置文件“config.yaml”中将languages部分删掉，保留中文部分的title。
+然后将languageCode改为“zh-cn”&lt;br&gt;
+　　左图是处理前，右图是处理后。
+&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312184348.png&#34;
+	width=&#34;1918&#34;
+	height=&#34;1030&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;186&#34;
+		data-flex-basis=&#34;446px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;修改头像&#34;&gt;修改头像&lt;/h2&gt;
+&lt;p&gt;在“assets”文件夹内创建一个文件夹，命名为“img”，将头像切割成正方形，更名为“avatar.png”，并放在img文件夹内即可。&lt;/p&gt;
+&lt;h2 id=&#34;修改博主名字博客网站标题和网站简介&#34;&gt;修改博主名字、博客网站标题和网站简介&lt;/h2&gt;
+&lt;p&gt;　　由于我使用的主题没有提供单独的博主名字设置和主页标题设置，所以博主名字我直接在主题里进行了修改。
+　　左侧页面名字位置的配置在“blog\themes\hugo-theme-stack\layouts\partials\sidebar\left.html”文件中，找到这个文件的方法是在网页中审查元素，找到关键词后进行查找，最终定位到这个位置。图中红色框是我修改后的内容，蓝色框是审查元素找到的内容。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192010.png&#34;
+	width=&#34;349&#34;
+	height=&#34;392&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192010_hu0f5042bf6316465d106c190abde006e8_18083_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312192010_hu0f5042bf6316465d106c190abde006e8_18083_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;89&#34;
+		data-flex-basis=&#34;213px&#34;
+	
+&gt; &lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312191842.png&#34;
+	width=&#34;754&#34;
+	height=&#34;755&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312191842_hu3a4c68a7470d5c8dbabcec9c3eaab9d7_60220_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312191842_hu3a4c68a7470d5c8dbabcec9c3eaab9d7_60220_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;99&#34;
+		data-flex-basis=&#34;239px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;　　博客网站的标题和简介可以直接在根目录下的配置文件中修改：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192559.png&#34;
+	width=&#34;738&#34;
+	height=&#34;747&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192559_hu961a0bbbae52e8bf48aab00443f2f32b_52210_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312192559_hu961a0bbbae52e8bf48aab00443f2f32b_52210_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;98&#34;
+		data-flex-basis=&#34;237px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;　　首页博主名字下面的介绍也可以在根目录的配置中修改：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192911.png&#34;
+	width=&#34;741&#34;
+	height=&#34;747&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192911_huc39e8fb6d40c3d6a3136ea6ea3a75dd4_29845_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312192911_huc39e8fb6d40c3d6a3136ea6ea3a75dd4_29845_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;99&#34;
+		data-flex-basis=&#34;238px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;　　不过我想把我写的内容排一下版，所以还是在主题里面直接修改了，和上面修改博主名字的操作一样，这里不再赘述。&lt;/p&gt;
+&lt;h2 id=&#34;修改页脚&#34;&gt;修改页脚&lt;/h2&gt;
+&lt;h2 id=&#34;小功能记录&#34;&gt;小功能记录&lt;/h2&gt;
+
+
+
+
+
+
+    
+
+
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe src=&#34;https://player.bilibili.com/player.html?as_wide=1&amp;amp;high_quality=1&amp;amp;page=1&amp;bvid=BV1vo4y167rK&#34;
+            scrolling=&#34;no&#34;
+            frameborder=&#34;no&#34;
+            framespacing=&#34;0&#34;
+            allowfullscreen=&#34;true&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        </item>
+        <item>
+        <title>第一篇博客，讲讲我在搭建Hugo博客时踩过的坑</title>
+        <link>https://bi1kbu.github.io/p/hugo-install/</link>
+        <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://bi1kbu.github.io/p/hugo-install/</guid>
+        <description>&lt;img src="https://bi1kbu.github.io/p/hugo-install/wx_20230312153745.png" alt="Featured image of post 第一篇博客，讲讲我在搭建Hugo博客时踩过的坑" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;　　在我最开始想搭建一个Hugo博客时，如何获取资料成了最大的问题。&lt;/p&gt;
+&lt;p&gt;　　对于一个英语基本为零，计算机知识只能算略懂的人而言，直接到github并不是一个很好的选择，所以我选择到B站上看一看其他人是怎么做的。但是有一个问题，视频的知识密度并不如文字，对于需要一步一步跟着做的工作来说，看视频还是比较费时间。所以，百度。但是百度和CSDN等又全是些重复的、没有实际帮助的内容。在和ifLab社团同学聊天求助的时候，某大佬对于我提出的一个bug，给出了ChatGPT的答案，这让我才想起来，我还可以问ChatGPT。（所以说，还是没形成先问问AI的习惯）&lt;/p&gt;
+&lt;p&gt;　　事实证明，ChatGPT给出的答案还不错，而且比起官方文档用软件翻译为中文看起来更像人话。
+&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312160744.png&#34;
+	width=&#34;1044&#34;
+	height=&#34;340&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312160744_hufb44bd0cd8dcaee90ca1357b5caba991_35598_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-install/wx_20230312160744_hufb44bd0cd8dcaee90ca1357b5caba991_35598_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;307&#34;
+		data-flex-basis=&#34;736px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;搭建过程&#34;&gt;搭建过程&lt;/h2&gt;
+&lt;p&gt;　　接下来的几个部分有一些采用我与ChatGPT对话的形式，掺杂着我的一些体会。还有一些确实ChatGPT给出的答案不靠谱不正确，所以后面就没采用。说到底ChatGPT还是一个语言模型，它毕竟没有实际操作过，只是学习的别人的文章，所以多少存在一些问题，而且数据库并不是最新的，我用的这个主题最后更新时间是18年，所以他有收录，新的主题就不一定了。&lt;br&gt;
+　　★斜体字代表这是我向它提出的问题，代码块是他回答的内容。&lt;/p&gt;
+&lt;h3 id=&#34;搭建hugo博客的流程&#34;&gt;搭建Hugo博客的流程&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;我想用Hugo搭建一个博客，我该如何做？&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;使用Hugo搭建博客是一个非常流行的选择，它是一个快速，易于使用的静态网站生成器。以下是一些基本的步骤：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;安装Hugo：首先需要安装Hugo，你可以从Hugo官方网站上下载并安装它。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;创建新站点：在命令行中使用hugo new site &amp;lt;your_site_name&amp;gt;命令来创建一个新站点，其中&amp;lt;your_site_name&amp;gt;是你的博客的名称。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;添加主题：Hugo有很多不同的主题可供选择，你可以从Hugo官方网站主题列表上选择一个。下载主题并将其放在你的博客目录的/themes文件夹中。然后将你的博客配置文件中的theme字段设置为你所选择的主题名称。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;创建文章：在你的博客目录中，使用hugo new &amp;lt;post_title&amp;gt;.md命令来创建一篇新文章。这将在/content/posts文件夹中创建一个新的Markdown文件，其中&amp;lt;post_title&amp;gt;是你文章的标题。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;编辑文章：使用Markdown格式编辑文章，并在文件头部添加Front Matter元数据。这些元数据包括文章标题、日期、作者、摘要等。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;启动Hugo服务器：在命令行中使用hugo server -D命令来启动本地服务器。这将生成你的博客，并在本地的http://localhost:1313上预览它。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;部署博客：当你准备好将博客部署到生产环境时，可以使用hugo命令来生成静态HTML文件。将生成的文件上传到你的Web服务器或者静态网站托管服务上。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这些是基本的步骤，可以帮助你使用Hugo搭建一个博客。但是，使用Hugo的高级功能，如网站布局、自定义短代码和主题定制等，可以使你的博客更加个性化和专业化。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;在windows系统下安装hugo&#34;&gt;在Windows系统下安装Hugo&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;如何在Windows系统下安装Hugo？&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;以下是在Windows系统下安装Hugo的步骤：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;首先，您需要从Hugo的官方网站https://gohugo.io/getting-started/installing/下载最新版本的Hugo二进制文件。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;解压缩下载的二进制文件到您想要安装Hugo的目录中。您可以选择将其放在C:\Hugo或D:\Hugo等文件夹中。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;接下来，您需要将Hugo的安装路径添加到系统的PATH环境变量中，这样您就可以在任何地方都使用Hugo了。以下是如何添加PATH环境变量的步骤：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;a. 打开控制面板，点击“系统和安全”，然后选择“系统”。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;b. 在左侧的面板中，选择“高级系统设置”。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;c. 在“高级”选项卡下，单击“环境变量”按钮。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;d. 在“系统变量”下，查找名为“Path”的变量，并选择“编辑”。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;e. 单击“新建”按钮，然后在文本框中输入Hugo的安装路径。例如，如果您将Hugo安装在C:\Hugo中，则输入“C:\Hugo”。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;f. 单击“确定”按钮，然后关闭所有窗口。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;最后，您可以在命令行中测试Hugo是否安装成功。打开命令提示符窗口，并键入“hugo version”（不包括引号）。如果您看到类似“Hugo version 0.88.1 windows/amd64 BuildDate=...”的输出，则表示已成功安装Hugo。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;现在，您已经成功地在Windows系统上安装了Hugo。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;　　这里没提到一点，Hugo分两个版本，我是用的主题需要拓展版本，所以不要下载错了。拓展版与标准版在&lt;code&gt;hugo version&lt;/code&gt;时显示不一样，标准版显示如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo v0.102.3-b76146b129d7caa52417f8e914fc5b9271bf56fc windows/amd64 BuildDate=2022-09-01T10:16:19Z VendorInfo=gohugoio
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;　　而拓展版会有一个+extended的标记：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hugo v0.102.3-b76146b129d7caa52417f8e914fc5b9271bf56fc+extended windows/amd64 BuildDate=2022-09-01T10:16:19Z VendorInfo=gohugoio
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;安装主题&#34;&gt;安装主题&lt;/h3&gt;
+&lt;p&gt;　　我是用的主题是&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/hugo-theme-stack/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;hugo-theme-stack&lt;/a&gt;，接下来以这个主题为例来讲我是如何安装的。从这里开始ChatGPT就开始不靠谱了，所以后面只有debug的时候让它当翻译了。&lt;/p&gt;
+&lt;p&gt;　　首先访问&lt;a class=&#34;link&#34; href=&#34;https://themes.gohugo.io/themes/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo主题&lt;/a&gt;页面，挑一个自己喜欢的。&lt;strong&gt;建议一定要挑一个一直在有人更新的主题，或者具备完善文档的主题。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这里提供一下我使用的&lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/guide/getting-started&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;主题的文档&lt;/a&gt;，比上不足比下有余。&lt;/p&gt;
+&lt;p&gt;　　下载主题有两种方式，一种是找到界面里面github的地址，然后用git来下载，如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;　　这个指令代表着将hugo-theme-stack主题克隆到自己博客网站的themes文件夹内，这个文件夹是用来专门放置主题的，所有文件夹的功能介绍可以在本文后面的“Hugo目录结构介绍”里找到。&lt;br&gt;
+　　或者可以通过Code→Download ZIP，并将下载的主题解压缩到themes文件夹内，需要注意的是，通过这种方式下载下来的文件夹后面会带有一个-master后缀，需要删掉（说是会有bug，但是我没试，直接按网上教程给的走了）。&lt;br&gt;
+　　最终效果如图所示：
+&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312174309.png&#34;
+	width=&#34;717&#34;
+	height=&#34;191&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312174309_hud057d39d47b351c5f897a45fee25aa04_27706_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-install/wx_20230312174309_hud057d39d47b351c5f897a45fee25aa04_27706_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;375&#34;
+		data-flex-basis=&#34;900px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;运行主题自带的例程&#34;&gt;运行主题自带的例程&lt;/h3&gt;
+&lt;p&gt;　　在这个主题中，带有一个名为“exampleSite”的文件夹，这个文件夹里面存放的是一个例程，包括以下文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;exampleSite
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── content	// 例程的主要文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── .gitignore	// git的忽略提交规则文件，对本文没啥用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── config.yaml	// 配置文件，重要
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── LICENSE	// 许可文件，里面写了许可哪些内容，可以看看，对本文没啥用
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── README.md	// 自述文件，可以看看，同样没啥用
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;　　把“content”文件和“config.yaml”文件复制到博客根目录，并删掉原来的配置文件（如果文件拓展名一样，在复制时直接点击替换就可以了）。如图：&lt;br&gt;
+&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312175353.png&#34;
+	width=&#34;589&#34;
+	height=&#34;378&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312175353_hu6700104967ec44f5d040375f364118cc_20599_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-install/wx_20230312175353_hu6700104967ec44f5d040375f364118cc_20599_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;373px&#34;
+	
+&gt;&lt;br&gt;
+　　然后在根目录打开cmd，或者打开cmd切换到博客的根目录，输入&lt;code&gt;hugo server&lt;/code&gt;，就可以运行了。&lt;br&gt;
+　　运行后可以通过 &lt;a class=&#34;link&#34; href=&#34;http://localhost:1313/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;http://localhost:1313/&lt;/a&gt; 访问生成的博客。&lt;br&gt;
+　　如果生成过程中出现超时等错误，可以看一下文后的报错排除部分是否有提及，如果没有请&lt;a class=&#34;link&#34; href=&#34;mailto:wangshiwen@asacr.org&#34; &gt;邮件联系&lt;/a&gt;我。&lt;/p&gt;
+&lt;h2 id=&#34;hugo目录结构介绍&#34;&gt;Hugo目录结构介绍&lt;/h2&gt;
+&lt;p&gt;目录结构&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;blog			//整个博客网站在一个文件夹内，任意名字都可以
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── archetypes		//
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── assets		//
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── content		//站点下所有的内容页面，也就是我们创建的md文件都在这个目录下面。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│　├── categories	//
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│　├── page		//
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│　├── post		//
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;│　└── _index.md	//
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── data		//data目录用来存储网站用到一些配置、数据文件
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── layouts		//存放用来渲染content目录下面内容的模版文件,如果用了第三方的主题，这里可能是空的，可以在这里新增覆盖也可以在themes文件里相应位置来改
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── public		//hugo编译后生成网站的所有文件都存储在这里面，把这个目录放到任意web服务器就可以发布网站成功。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── resources		//
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── static		//用来存储图片、css、js等静态资源文件。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;├── themes		//用来存储主题，主题可以方便的帮助我们快速建立站点，也可以方便的切换网站的风格样式。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;└── config.toml		//全局配置文件，用来配置整个站点的信息
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;报错排除&#34;&gt;报错排除&lt;/h2&gt;
+&lt;h3 id=&#34;连接超时报错&#34;&gt;连接超时报错&lt;/h3&gt;
+&lt;p&gt;　　Twitter、YouTube、Vimeo等连接超时：&lt;br&gt;
+　　根据报错提示找到对应文件，删除示例中报错的部分（这部分报错主要是由于连不上外网导致的，而且一般国内也没人用这些功能），如果搜不到大概率是由于win系统的搜索系统不会检索md文件内的内容，我的解决方法是用pychram建立一个工程，然后再pychram里搜索，总之能检索到就行。&lt;br&gt;
+　　我这里报错的文件在“blog\content\post\rich-content\index.md”里面，如果用的类似主题而且懒得去用别的软件建索引，可以试试直接到这个文件里碰碰运气。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

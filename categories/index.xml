@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on 望远山而前行 - 王诗文的博客</title>
+        <link>https://bi1kbu.github.io/categories/</link>
+        <description>Recent content in Categories on 望远山而前行 - 王诗文的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo</title>
+        <link>https://bi1kbu.github.io/categories/hugo/</link>
+        <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://bi1kbu.github.io/categories/hugo/</guid>
+        <description>&lt;img src="https://bi1kbu.github.io/categories/hugo/wx_20230313102459.png" alt="Featured image of post Hugo" /&gt;</description>
+        </item>
+        <item>
+        <title>技术类</title>
+        <link>https://bi1kbu.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</link>
+        <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://bi1kbu.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

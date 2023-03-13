@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='没错，我搭建完博客的第一篇博客是如何搭建一个博客并写出第一篇博客然后把博客上线的事。。。'>
+<title>第一篇博客，讲讲我在搭建Hugo博客时踩过的坑</title>
+
+<link rel='canonical' href='https://bi1kbu.github.io/p/hugo-install/'>
+
+<link rel="stylesheet" href="/scss/style.min.5be32ca3f6e1a997c75795c4359147cc6d4fbd34948c0acd51e31d237033978a.css"><meta property='og:title' content='第一篇博客，讲讲我在搭建Hugo博客时踩过的坑'>
+<meta property='og:description' content='没错，我搭建完博客的第一篇博客是如何搭建一个博客并写出第一篇博客然后把博客上线的事。。。'>
+<meta property='og:url' content='https://bi1kbu.github.io/p/hugo-install/'>
+<meta property='og:site_name' content='望远山而前行 - 王诗文的博客'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-03-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-12T00:00:00&#43;00:00'/><meta property='og:image' content='https://bi1kbu.github.io/p/hugo-install/wx_20230312153745.png' />
+<meta name="twitter:title" content="第一篇博客，讲讲我在搭建Hugo博客时踩过的坑">
+<meta name="twitter:description" content="没错，我搭建完博客的第一篇博客是如何搭建一个博客并写出第一篇博客然后把博客上线的事。。。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bi1kbu.github.io/p/hugo-install/wx_20230312153745.png' />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu7ad0e56703b17a8a889d30d4e50bd21c_833513_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🕑</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">王诗文 bi1kbu</a></h1>
+            <h2 class="site-description">知不足而奋进，</h2>
+            <h2 class="site-description">望远山而前行，</h2>
+            <h2 class="site-description">历干帆而归来，</h2>
+            <h2 class="site-description">经万苦而不减热爱。</h2>
+        </div>
+    </header>
+
+    <ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>博客</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#搭建过程">搭建过程</a>
+      <ol>
+        <li><a href="#搭建hugo博客的流程">搭建Hugo博客的流程</a></li>
+        <li><a href="#在windows系统下安装hugo">在Windows系统下安装Hugo</a></li>
+        <li><a href="#安装主题">安装主题</a></li>
+        <li><a href="#运行主题自带的例程">运行主题自带的例程</a></li>
+      </ol>
+    </li>
+    <li><a href="#hugo目录结构介绍">Hugo目录结构介绍</a></li>
+    <li><a href="#报错排除">报错排除</a>
+      <ol>
+        <li><a href="#连接超时报错">连接超时报错</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo-install/">
+                <img src="/p/hugo-install/wx_20230312153745_hucdd5087cc4a7500436de73b01d7379f0_110512_800x0_resize_box_3.png"
+                        srcset="/p/hugo-install/wx_20230312153745_hucdd5087cc4a7500436de73b01d7379f0_110512_800x0_resize_box_3.png 800w, /p/hugo-install/wx_20230312153745_hucdd5087cc4a7500436de73b01d7379f0_110512_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="418" 
+                        loading="lazy"
+                        alt="Featured image of post 第一篇博客，讲讲我在搭建Hugo博客时踩过的坑" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/" >
+                技术类
+            </a>
+        
+            <a href="/categories/hugo/" style="background-color: #2a9d8f; color: #fff;">
+                Hugo
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo-install/">第一篇博客，讲讲我在搭建Hugo博客时踩过的坑</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            没错，我搭建完博客的第一篇博客是如何搭建一个博客并写出第一篇博客然后把博客上线的事。。。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 12, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">前言</h2>
+<p>　　在我最开始想搭建一个Hugo博客时，如何获取资料成了最大的问题。</p>
+<p>　　对于一个英语基本为零，计算机知识只能算略懂的人而言，直接到github并不是一个很好的选择，所以我选择到B站上看一看其他人是怎么做的。但是有一个问题，视频的知识密度并不如文字，对于需要一步一步跟着做的工作来说，看视频还是比较费时间。所以，百度。但是百度和CSDN等又全是些重复的、没有实际帮助的内容。在和ifLab社团同学聊天求助的时候，某大佬对于我提出的一个bug，给出了ChatGPT的答案，这让我才想起来，我还可以问ChatGPT。（所以说，还是没形成先问问AI的习惯）</p>
+<p>　　事实证明，ChatGPT给出的答案还不错，而且比起官方文档用软件翻译为中文看起来更像人话。
+<img src="/p/hugo-install/wx_20230312160744.png"
+	width="1044"
+	height="340"
+	srcset="/p/hugo-install/wx_20230312160744_hufb44bd0cd8dcaee90ca1357b5caba991_35598_480x0_resize_box_3.png 480w, /p/hugo-install/wx_20230312160744_hufb44bd0cd8dcaee90ca1357b5caba991_35598_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="307"
+		data-flex-basis="736px"
+	
+></p>
+<h2 id="搭建过程">搭建过程</h2>
+<p>　　接下来的几个部分有一些采用我与ChatGPT对话的形式，掺杂着我的一些体会。还有一些确实ChatGPT给出的答案不靠谱不正确，所以后面就没采用。说到底ChatGPT还是一个语言模型，它毕竟没有实际操作过，只是学习的别人的文章，所以多少存在一些问题，而且数据库并不是最新的，我用的这个主题最后更新时间是18年，所以他有收录，新的主题就不一定了。<br>
+　　★斜体字代表这是我向它提出的问题，代码块是他回答的内容。</p>
+<h3 id="搭建hugo博客的流程">搭建Hugo博客的流程</h3>
+<p><em>我想用Hugo搭建一个博客，我该如何做？</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">使用Hugo搭建博客是一个非常流行的选择，它是一个快速，易于使用的静态网站生成器。以下是一些基本的步骤：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">安装Hugo：首先需要安装Hugo，你可以从Hugo官方网站上下载并安装它。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">创建新站点：在命令行中使用hugo new site &lt;your_site_name&gt;命令来创建一个新站点，其中&lt;your_site_name&gt;是你的博客的名称。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">添加主题：Hugo有很多不同的主题可供选择，你可以从Hugo官方网站主题列表上选择一个。下载主题并将其放在你的博客目录的/themes文件夹中。然后将你的博客配置文件中的theme字段设置为你所选择的主题名称。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">创建文章：在你的博客目录中，使用hugo new &lt;post_title&gt;.md命令来创建一篇新文章。这将在/content/posts文件夹中创建一个新的Markdown文件，其中&lt;post_title&gt;是你文章的标题。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">编辑文章：使用Markdown格式编辑文章，并在文件头部添加Front Matter元数据。这些元数据包括文章标题、日期、作者、摘要等。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">启动Hugo服务器：在命令行中使用hugo server -D命令来启动本地服务器。这将生成你的博客，并在本地的http://localhost:1313上预览它。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">部署博客：当你准备好将博客部署到生产环境时，可以使用hugo命令来生成静态HTML文件。将生成的文件上传到你的Web服务器或者静态网站托管服务上。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">这些是基本的步骤，可以帮助你使用Hugo搭建一个博客。但是，使用Hugo的高级功能，如网站布局、自定义短代码和主题定制等，可以使你的博客更加个性化和专业化。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="在windows系统下安装hugo">在Windows系统下安装Hugo</h3>
+<p><em>如何在Windows系统下安装Hugo？</em></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">以下是在Windows系统下安装Hugo的步骤：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">首先，您需要从Hugo的官方网站https://gohugo.io/getting-started/installing/下载最新版本的Hugo二进制文件。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">解压缩下载的二进制文件到您想要安装Hugo的目录中。您可以选择将其放在C:\Hugo或D:\Hugo等文件夹中。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">接下来，您需要将Hugo的安装路径添加到系统的PATH环境变量中，这样您就可以在任何地方都使用Hugo了。以下是如何添加PATH环境变量的步骤：
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">a. 打开控制面板，点击“系统和安全”，然后选择“系统”。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">b. 在左侧的面板中，选择“高级系统设置”。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">c. 在“高级”选项卡下，单击“环境变量”按钮。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">d. 在“系统变量”下，查找名为“Path”的变量，并选择“编辑”。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">e. 单击“新建”按钮，然后在文本框中输入Hugo的安装路径。例如，如果您将Hugo安装在C:\Hugo中，则输入“C:\Hugo”。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">f. 单击“确定”按钮，然后关闭所有窗口。
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">最后，您可以在命令行中测试Hugo是否安装成功。打开命令提示符窗口，并键入“hugo version”（不包括引号）。如果您看到类似“Hugo version 0.88.1 windows/amd64 BuildDate=...”的输出，则表示已成功安装Hugo。
+</span></span><span class="line"><span class="cl">现在，您已经成功地在Windows系统上安装了Hugo。
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>　　这里没提到一点，Hugo分两个版本，我是用的主题需要拓展版本，所以不要下载错了。拓展版与标准版在<code>hugo version</code>时显示不一样，标准版显示如下：</p>
+<pre><code>hugo v0.102.3-b76146b129d7caa52417f8e914fc5b9271bf56fc windows/amd64 BuildDate=2022-09-01T10:16:19Z VendorInfo=gohugoio
+</code></pre>
+<p>　　而拓展版会有一个+extended的标记：</p>
+<pre><code>hugo v0.102.3-b76146b129d7caa52417f8e914fc5b9271bf56fc+extended windows/amd64 BuildDate=2022-09-01T10:16:19Z VendorInfo=gohugoio
+</code></pre>
+<h3 id="安装主题">安装主题</h3>
+<p>　　我是用的主题是<a class="link" href="https://themes.gohugo.io/themes/hugo-theme-stack/"  target="_blank" rel="noopener"
+    >hugo-theme-stack</a>，接下来以这个主题为例来讲我是如何安装的。从这里开始ChatGPT就开始不靠谱了，所以后面只有debug的时候让它当翻译了。</p>
+<p>　　首先访问<a class="link" href="https://themes.gohugo.io/themes/"  target="_blank" rel="noopener"
+    >Hugo主题</a>页面，挑一个自己喜欢的。<strong>建议一定要挑一个一直在有人更新的主题，或者具备完善文档的主题。</strong></p>
+<p>这里提供一下我使用的<a class="link" href="https://stack.jimmycai.com/guide/getting-started"  target="_blank" rel="noopener"
+    >主题的文档</a>，比上不足比下有余。</p>
+<p>　　下载主题有两种方式，一种是找到界面里面github的地址，然后用git来下载，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/CaiJimmy/hugo-theme-stack/ themes/hugo-theme-stack
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>　　这个指令代表着将hugo-theme-stack主题克隆到自己博客网站的themes文件夹内，这个文件夹是用来专门放置主题的，所有文件夹的功能介绍可以在本文后面的“Hugo目录结构介绍”里找到。<br>
+　　或者可以通过Code→Download ZIP，并将下载的主题解压缩到themes文件夹内，需要注意的是，通过这种方式下载下来的文件夹后面会带有一个-master后缀，需要删掉（说是会有bug，但是我没试，直接按网上教程给的走了）。<br>
+　　最终效果如图所示：
+<img src="/p/hugo-install/wx_20230312174309.png"
+	width="717"
+	height="191"
+	srcset="/p/hugo-install/wx_20230312174309_hud057d39d47b351c5f897a45fee25aa04_27706_480x0_resize_box_3.png 480w, /p/hugo-install/wx_20230312174309_hud057d39d47b351c5f897a45fee25aa04_27706_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="375"
+		data-flex-basis="900px"
+	
+></p>
+<h3 id="运行主题自带的例程">运行主题自带的例程</h3>
+<p>　　在这个主题中，带有一个名为“exampleSite”的文件夹，这个文件夹里面存放的是一个例程，包括以下文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">exampleSite
+</span></span><span class="line"><span class="cl">├── content	// 例程的主要文件
+</span></span><span class="line"><span class="cl">├── .gitignore	// git的忽略提交规则文件，对本文没啥用
+</span></span><span class="line"><span class="cl">├── config.yaml	// 配置文件，重要
+</span></span><span class="line"><span class="cl">├── LICENSE	// 许可文件，里面写了许可哪些内容，可以看看，对本文没啥用
+</span></span><span class="line"><span class="cl">└── README.md	// 自述文件，可以看看，同样没啥用
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>　　把“content”文件和“config.yaml”文件复制到博客根目录，并删掉原来的配置文件（如果文件拓展名一样，在复制时直接点击替换就可以了）。如图：<br>
+<img src="/p/hugo-install/wx_20230312175353.png"
+	width="589"
+	height="378"
+	srcset="/p/hugo-install/wx_20230312175353_hu6700104967ec44f5d040375f364118cc_20599_480x0_resize_box_3.png 480w, /p/hugo-install/wx_20230312175353_hu6700104967ec44f5d040375f364118cc_20599_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="155"
+		data-flex-basis="373px"
+	
+><br>
+　　然后在根目录打开cmd，或者打开cmd切换到博客的根目录，输入<code>hugo server</code>，就可以运行了。<br>
+　　运行后可以通过 <a class="link" href="http://localhost:1313/"  target="_blank" rel="noopener"
+    >http://localhost:1313/</a> 访问生成的博客。<br>
+　　如果生成过程中出现超时等错误，可以看一下文后的报错排除部分是否有提及，如果没有请<a class="link" href="mailto:wangshiwen@asacr.org" >邮件联系</a>我。</p>
+<h2 id="hugo目录结构介绍">Hugo目录结构介绍</h2>
+<p>目录结构</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">blog			//整个博客网站在一个文件夹内，任意名字都可以
+</span></span><span class="line"><span class="cl">├── archetypes		//
+</span></span><span class="line"><span class="cl">├── assets		//
+</span></span><span class="line"><span class="cl">├── content		//站点下所有的内容页面，也就是我们创建的md文件都在这个目录下面。
+</span></span><span class="line"><span class="cl">│　├── categories	//
+</span></span><span class="line"><span class="cl">│　├── page		//
+</span></span><span class="line"><span class="cl">│　├── post		//
+</span></span><span class="line"><span class="cl">│　└── _index.md	//
+</span></span><span class="line"><span class="cl">├── data		//data目录用来存储网站用到一些配置、数据文件
+</span></span><span class="line"><span class="cl">├── layouts		//存放用来渲染content目录下面内容的模版文件,如果用了第三方的主题，这里可能是空的，可以在这里新增覆盖也可以在themes文件里相应位置来改
+</span></span><span class="line"><span class="cl">├── public		//hugo编译后生成网站的所有文件都存储在这里面，把这个目录放到任意web服务器就可以发布网站成功。
+</span></span><span class="line"><span class="cl">├── resources		//
+</span></span><span class="line"><span class="cl">├── static		//用来存储图片、css、js等静态资源文件。
+</span></span><span class="line"><span class="cl">├── themes		//用来存储主题，主题可以方便的帮助我们快速建立站点，也可以方便的切换网站的风格样式。
+</span></span><span class="line"><span class="cl">└── config.toml		//全局配置文件，用来配置整个站点的信息
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="报错排除">报错排除</h2>
+<h3 id="连接超时报错">连接超时报错</h3>
+<p>　　Twitter、YouTube、Vimeo等连接超时：<br>
+　　根据报错提示找到对应文件，删除示例中报错的部分（这部分报错主要是由于连不上外网导致的，而且一般国内也没人用这些功能），如果搜不到大概率是由于win系统的搜索系统不会检索md文件内的内容，我的解决方法是用pychram建立一个工程，然后再pychram里搜索，总之能检索到就行。<br>
+　　我这里报错的文件在“blog\content\post\rich-content\index.md”里面，如果用的类似主题而且懒得去用别的软件建索引，可以试试直接到这个文件里碰碰运气。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-launch/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo-launch/wx_20230312184348.b9c7bfa8167c91c430de024fb4c4199b_huba3a0cbdfc6932219658b6cc6860c32f_120735_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 使用GithubPages部署上线"
+                        data-key="hugo-launch" 
+                        data-hash="md5-uce/qBZ8kcQw3gJPtMQZmw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用GithubPages部署上线</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-development/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo-development/wx_20230312184348.b9c7bfa8167c91c430de024fb4c4199b_huba3a0cbdfc6932219658b6cc6860c32f_120735_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hugo博客美化（未完）"
+                        data-key="hugo-development" 
+                        data-hash="md5-uce/qBZ8kcQw3gJPtMQZmw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo博客美化（未完）</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2023 望远山而前行 - 王诗文的博客
+    </section><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/38854'
+                        target="_blank"
+                        title="bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.73252 2.67094C3.33229 2.28484 3.33229 1.64373 3.73252 1.25764C4.11291 0.890684 4.71552 0.890684 5.09591 1.25764L7.21723 3.30403C7.27749 3.36218 7.32869 3.4261 7.37081 3.49407H10.5789C10.6211 3.4261 10.6723 3.36218 10.7325 3.30403L12.8538 1.25764C13.2342 0.890684 13.8368 0.890684 14.2172 1.25764C14.6175 1.64373 14.6175 2.28484 14.2172 2.67094L13.364 3.49407H14C16.2091 3.49407 18 5.28493 18 7.49407V12.9996C18 15.2087 16.2091 16.9996 14 16.9996H4C1.79086 16.9996 0 15.2087 0 12.9996V7.49406C0 5.28492 1.79086 3.49407 4 3.49407H4.58579L3.73252 2.67094ZM4 5.42343C2.89543 5.42343 2 6.31886 2 7.42343V13.0702C2 14.1748 2.89543 15.0702 4 15.0702H14C15.1046 15.0702 16 14.1748 16 13.0702V7.42343C16 6.31886 15.1046 5.42343 14 5.42343H4ZM5 9.31747C5 8.76519 5.44772 8.31747 6 8.31747C6.55228 8.31747 7 8.76519 7 9.31747V10.2115C7 10.7638 6.55228 11.2115 6 11.2115C5.44772 11.2115 5 10.7638 5 10.2115V9.31747ZM12 8.31747C11.4477 8.31747 11 8.76519 11 9.31747V10.2115C11 10.7638 11.4477 11.2115 12 11.2115C12.5523 11.2115 13 10.7638 13 10.2115V9.31747C13 8.76519 12.5523 8.31747 12 8.31747Z" fill="currentColor"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:wangshiwen@asacr.org'
+                        target="_blank"
+                        title="eMail to"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 512 512"><path d="M448 80h-384c-35.344 0-64 28.672-64 64v208c0 35.344 28.656 64 64 64h384c35.344 0 64-28.656 64-64v-208c0-35.328-28.656-64-64-64zM32 164l111.984 84-111.984 84v-168zM480 352c0 17.664-14.368 32-32 32h-384c-17.648 0-32-14.336-32-32l125.312-94 69.888 52.432c8.528 6.368 18.656 9.6 28.8 9.6 10.128 0 20.256-3.216 28.784-9.6l69.904-52.432 125.312 94zM480 332l-112-84 112-84v168zM275.184 297.632c-5.584 4.192-12.208 6.4-19.184 6.4s-13.616-2.224-19.2-6.4l-204.8-153.632c0-17.648 14.352-32 32-32h384c17.632 0 32 14.352 32 32l-204.816 153.632z" fill="#000000" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/ifLab'
+                        target="_blank"
+                        title="ifLab GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='http://asacr.org'
+                        target="_blank"
+                        title="访问曙光官网"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M894.185422 128.023792 129.814578 445.743994 445.99982 577.744353 571.860343 893.929596Z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+&nbsp;|&nbsp;
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
