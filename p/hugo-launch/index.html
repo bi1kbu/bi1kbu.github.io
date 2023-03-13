@@ -6,7 +6,14 @@ GitHub Pages 项目需要符合 username.github.io 的特殊命名格式，如�
 将仓库拉到本地 在你希望的目录位置，用下面的命令将新建的远程仓库拉到本地。
 git clone https://github.com/username/username.github.io
 添加静态网页文件添加到本地仓库 将hugo生成的public/目录下所有文件，复制到本地仓库，
-提交到github仓库 git push -u origin main'>
+提交到github仓库 git push -u origin main
+如果在此之前没有绑定过仓库，还需要绑定一下。
+报错及解决方案 生成密钥时报错 报错内容：bash: ~ssh-keygen: command not found
+解决方案：在windows的“设置→应用→应用和功能→可选功能”里搜索OpenSSH并安装。
+然后以管理员身份运行PowerShell
+输入以下内容
+Start-Service sshd
+Set-Service -Name sshd -StartupType &#39;Automatic&#39;1 2 3 4 5 6 7 8 9 10 11 if (!(Get-NetFirewallRule -Name &amp;#34;OpenSSH-Server-In-TCP&amp;#34; -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) { Write-Output &amp;#34;Firewall Rule &amp;#39;OpenSSH-Server-In-TCP&amp;#39; does not exist, creating it.'>
 <title>使用GithubPages部署上线</title>
 
 <link rel='canonical' href='https://bi1kbu.github.io/p/hugo-launch/'>
@@ -17,18 +24,32 @@ GitHub Pages 项目需要符合 username.github.io 的特殊命名格式，如�
 将仓库拉到本地 在你希望的目录位置，用下面的命令将新建的远程仓库拉到本地。
 git clone https://github.com/username/username.github.io
 添加静态网页文件添加到本地仓库 将hugo生成的public/目录下所有文件，复制到本地仓库，
-提交到github仓库 git push -u origin main'>
+提交到github仓库 git push -u origin main
+如果在此之前没有绑定过仓库，还需要绑定一下。
+报错及解决方案 生成密钥时报错 报错内容：bash: ~ssh-keygen: command not found
+解决方案：在windows的“设置→应用→应用和功能→可选功能”里搜索OpenSSH并安装。
+然后以管理员身份运行PowerShell
+输入以下内容
+Start-Service sshd
+Set-Service -Name sshd -StartupType &#39;Automatic&#39;1 2 3 4 5 6 7 8 9 10 11 if (!(Get-NetFirewallRule -Name &amp;#34;OpenSSH-Server-In-TCP&amp;#34; -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) { Write-Output &amp;#34;Firewall Rule &amp;#39;OpenSSH-Server-In-TCP&amp;#39; does not exist, creating it.'>
 <meta property='og:url' content='https://bi1kbu.github.io/p/hugo-launch/'>
 <meta property='og:site_name' content='望远山而前行 - 王诗文的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-03-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://bi1kbu.github.io/p/hugo-launch/wx_20230312184348.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-03-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-13T00:00:00&#43;00:00'/><meta property='og:image' content='https://bi1kbu.github.io/p/hugo-launch/wx_20230313130937.png' />
 <meta name="twitter:title" content="使用GithubPages部署上线">
 <meta name="twitter:description" content="基本流程 创建一个GithubPages仓库 将仓库拉到本地 添加静态网页文件添加到本地仓库 提交到github仓库 创建GithubPages仓库 新建一个public仓库，并命名为username.github.io，其中username指github账户名。
 GitHub Pages 项目需要符合 username.github.io 的特殊命名格式，如果仓库名和账户名没有完全匹配的话，网站就不能运行，所以一定要保证完全匹配。
 将仓库拉到本地 在你希望的目录位置，用下面的命令将新建的远程仓库拉到本地。
 git clone https://github.com/username/username.github.io
 添加静态网页文件添加到本地仓库 将hugo生成的public/目录下所有文件，复制到本地仓库，
-提交到github仓库 git push -u origin main"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://bi1kbu.github.io/p/hugo-launch/wx_20230312184348.png' />
+提交到github仓库 git push -u origin main
+如果在此之前没有绑定过仓库，还需要绑定一下。
+报错及解决方案 生成密钥时报错 报错内容：bash: ~ssh-keygen: command not found
+解决方案：在windows的“设置→应用→应用和功能→可选功能”里搜索OpenSSH并安装。
+然后以管理员身份运行PowerShell
+输入以下内容
+Start-Service sshd
+Set-Service -Name sshd -StartupType &#39;Automatic&#39;1 2 3 4 5 6 7 8 9 10 11 if (!(Get-NetFirewallRule -Name &amp;#34;OpenSSH-Server-In-TCP&amp;#34; -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) { Write-Output &amp;#34;Firewall Rule &amp;#39;OpenSSH-Server-In-TCP&amp;#39; does not exist, creating it."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://bi1kbu.github.io/p/hugo-launch/wx_20230313130937.png' />
     </head>
     <body class="
     article-page
@@ -248,6 +269,11 @@ git clone https://github.com/username/username.github.io
     <li><a href="#将仓库拉到本地">将仓库拉到本地</a></li>
     <li><a href="#添加静态网页文件添加到本地仓库">添加静态网页文件添加到本地仓库</a></li>
     <li><a href="#提交到github仓库">提交到github仓库</a></li>
+    <li><a href="#报错及解决方案">报错及解决方案</a>
+      <ol>
+        <li><a href="#生成密钥时报错">生成密钥时报错</a></li>
+      </ol>
+    </li>
   </ol>
 </nav>
         </div>
@@ -263,10 +289,10 @@ git clone https://github.com/username/username.github.io
     <header class="article-header">
         <div class="article-image">
             <a href="/p/hugo-launch/">
-                <img src="/p/hugo-launch/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_800x0_resize_box_3.png"
-                        srcset="/p/hugo-launch/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_800x0_resize_box_3.png 800w, /p/hugo-launch/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_1600x0_resize_box_3.png 1600w"
+                <img src="/p/hugo-launch/wx_20230313130937_hu7e5e4a36377aad84e195282a989f8f73_207026_800x0_resize_box_3.png"
+                        srcset="/p/hugo-launch/wx_20230313130937_hu7e5e4a36377aad84e195282a989f8f73_207026_800x0_resize_box_3.png 800w, /p/hugo-launch/wx_20230313130937_hu7e5e4a36377aad84e195282a989f8f73_207026_1600x0_resize_box_3.png 1600w"
                         width="800" 
-                        height="430" 
+                        height="378" 
                         loading="lazy"
                         alt="Featured image of post 使用GithubPages部署上线" />
                 
@@ -359,7 +385,45 @@ git clone https://github.com/username/username.github.io
 <p>将hugo生成的public/目录下所有文件，复制到本地仓库，</p>
 <h2 id="提交到github仓库">提交到github仓库</h2>
 <p><code>git push -u origin main</code></p>
-
+<p>如果在此之前没有绑定过仓库，还需要绑定一下。</p>
+<h2 id="报错及解决方案">报错及解决方案</h2>
+<h3 id="生成密钥时报错">生成密钥时报错</h3>
+<p>报错内容：bash: ~ssh-keygen: command not found<br>
+解决方案：在windows的“设置→应用→应用和功能→可选功能”里搜索OpenSSH并安装。<br>
+然后以<strong>管理员</strong>身份运行PowerShell<br>
+输入以下内容<br>
+Start-Service sshd</p>
+<pre><code>Set-Service -Name sshd -StartupType 'Automatic'
+</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">if (!(Get-NetFirewallRule -Name &#34;OpenSSH-Server-In-TCP&#34; -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    Write-Output &#34;Firewall Rule &#39;OpenSSH-Server-In-TCP&#39; does not exist, creating it...&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    New-NetFirewallRule -Name &#39;OpenSSH-Server-In-TCP&#39; -DisplayName &#39;OpenSSH Server (sshd)&#39; -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">} else {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    Write-Output &#34;Firewall rule &#39;OpenSSH-Server-In-TCP&#39; has been created and exists.&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
