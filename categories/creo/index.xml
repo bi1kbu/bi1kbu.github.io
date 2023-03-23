@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Creo on 望远山而前行 - 王诗文的博客</title>
+        <link>https://bi1kbu.github.io/categories/creo/</link>
+        <description>Recent content in Creo on 望远山而前行 - 王诗文的博客</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/categories/creo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>曲面建模注意事项汇总</title>
+        <link>https://bi1kbu.github.io/p/creo-surface-modeling/</link>
+        <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://bi1kbu.github.io/p/creo-surface-modeling/</guid>
+        <description>&lt;img src="https://bi1kbu.github.io/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post 曲面建模注意事项汇总" /&gt;&lt;h2 id=&#34;曲面宜长不宜短&#34;&gt;曲面宜长不宜短&lt;/h2&gt;
+&lt;p&gt;最先遇到的问题：在生成实体时发现出现了报错，仔细检查后认为问题出在了两个曲面的缝隙上。&lt;/p&gt;
+&lt;p&gt;这个缝隙并非建模时没有用同一根曲面，而且Creo的精度系统带来的，而当时我并没有将两个曲面做的足够长，所以后期修补起来极其麻烦。&lt;/p&gt;
+&lt;h2 id=&#34;曲面-相交-修剪-与-合并的对比&#34;&gt;曲面-相交-修剪 与 合并的对比&lt;/h2&gt;
+&lt;p&gt;两个曲面想要在一条线上交会并形成一体，最好的方案还是曲面&lt;code&gt;合并&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在最开始的时候我不了解&lt;code&gt;合并&lt;/code&gt;命令时是可以指定合并方向并自动修剪的，所以采用了相交后&lt;code&gt;修剪&lt;/code&gt;的方式，也是给上述报错留下了隐患。&lt;/p&gt;
+&lt;h2 id=&#34;两实体中间有缝隙&#34;&gt;两实体中间有缝隙&lt;/h2&gt;
+&lt;p&gt;尝试过用&lt;code&gt;拉伸&lt;/code&gt;、&lt;code&gt;加厚&lt;/code&gt;等方式，均没有处理成功，&lt;/p&gt;
+&lt;p&gt;最终解决方案是使用曲面&lt;code&gt;移除&lt;/code&gt;命令实现，将缝隙一面选中后移除。&lt;/p&gt;
+&lt;p&gt;移除前：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595.png&#34;
+	width=&#34;3721&#34;
+	height=&#34;1778&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104440595&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;209&#34;
+		data-flex-basis=&#34;502px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;移除后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800.png&#34;
+	width=&#34;3255&#34;
+	height=&#34;1778&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104451800&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;439px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;去除凸起&#34;&gt;去除凸起&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;可使用&lt;code&gt;偏移&lt;/code&gt;→&lt;code&gt;替换曲面特征&lt;/code&gt;来实现&lt;/strong&gt;
+大面&lt;code&gt;crtl+c&lt;/code&gt;、&lt;code&gt;ctrl+v&lt;/code&gt;然后小面进行&lt;code&gt;偏移&lt;/code&gt;→&lt;code&gt;替换曲面特征&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;有小面的应先去&lt;code&gt;移除&lt;/code&gt;小面&lt;/p&gt;
+&lt;p&gt;第一步：复制修整的基准面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314.png&#34;
+	width=&#34;3255&#34;
+	height=&#34;1778&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104618314&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;439px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第二步：点击要移除的曲面，点击&lt;code&gt;偏移&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515.png&#34;
+	width=&#34;3727&#34;
+	height=&#34;2088&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104837515&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第三步：选择&lt;code&gt;替换曲面特征&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941.png&#34;
+	width=&#34;443&#34;
+	height=&#34;389&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104910941&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;273px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第四步：点击之前辅助爹基准面，即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541.png&#34;
+	width=&#34;3255&#34;
+	height=&#34;1778&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104938541&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;439px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;出现倒扣的问题&#34;&gt;出现倒扣的问题&lt;/h2&gt;
+&lt;p&gt;主要问题在于最开始做面的时候曲率没有全部在外面，不仅需要和分型面成90°，还需要把曲率进行调整。&lt;/p&gt;
+&lt;p&gt;错误的：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433.png&#34;
+	width=&#34;2293&#34;
+	height=&#34;764&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104322433&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;300&#34;
+		data-flex-basis=&#34;720px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;正确的：&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789.png&#34;
+	width=&#34;2856&#34;
+	height=&#34;960&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104235789&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;297&#34;
+		data-flex-basis=&#34;714px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
