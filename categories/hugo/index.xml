@@ -29,6 +29,9 @@
 &lt;h2 id=&#34;提交到github仓库&#34;&gt;提交到github仓库&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;git push -u origin main&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;如果在此之前没有绑定过仓库，还需要绑定一下。&lt;/p&gt;
+&lt;h2 id=&#34;后续将本地生成的网页文件同步到仓库中的流程&#34;&gt;后续将本地生成的网页文件同步到仓库中的流程&lt;/h2&gt;
+&lt;h3 id=&#34;通过hugo构建网页&#34;&gt;通过Hugo构建网页&lt;/h3&gt;
+&lt;p&gt;在本地项目根目录打开&lt;code&gt;cmd&lt;/code&gt;并输入&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;报错及解决方案&#34;&gt;报错及解决方案&lt;/h2&gt;
 &lt;h3 id=&#34;生成密钥时报错&#34;&gt;生成密钥时报错&lt;/h3&gt;
 &lt;p&gt;报错内容：bash: ~ssh-keygen: command not found&lt;br&gt;

@@ -8,6 +8,7 @@ git clone https://github.com/username/username.github.io
 添加静态网页文件添加到本地仓库 将hugo生成的public/目录下所有文件，复制到本地仓库，
 提交到github仓库 git push -u origin main
 如果在此之前没有绑定过仓库，还需要绑定一下。
+后续将本地生成的网页文件同步到仓库中的流程 通过Hugo构建网页 在本地项目根目录打开cmd并输入hugo
 报错及解决方案 生成密钥时报错 报错内容：bash: ~ssh-keygen: command not found
 解决方案：在windows的“设置→应用→应用和功能→可选功能”里搜索OpenSSH并安装。
 然后以管理员身份运行PowerShell
@@ -26,6 +27,7 @@ git clone https://github.com/username/username.github.io
 添加静态网页文件添加到本地仓库 将hugo生成的public/目录下所有文件，复制到本地仓库，
 提交到github仓库 git push -u origin main
 如果在此之前没有绑定过仓库，还需要绑定一下。
+后续将本地生成的网页文件同步到仓库中的流程 通过Hugo构建网页 在本地项目根目录打开cmd并输入hugo
 报错及解决方案 生成密钥时报错 报错内容：bash: ~ssh-keygen: command not found
 解决方案：在windows的“设置→应用→应用和功能→可选功能”里搜索OpenSSH并安装。
 然后以管理员身份运行PowerShell
@@ -43,6 +45,7 @@ git clone https://github.com/username/username.github.io
 添加静态网页文件添加到本地仓库 将hugo生成的public/目录下所有文件，复制到本地仓库，
 提交到github仓库 git push -u origin main
 如果在此之前没有绑定过仓库，还需要绑定一下。
+后续将本地生成的网页文件同步到仓库中的流程 通过Hugo构建网页 在本地项目根目录打开cmd并输入hugo
 报错及解决方案 生成密钥时报错 报错内容：bash: ~ssh-keygen: command not found
 解决方案：在windows的“设置→应用→应用和功能→可选功能”里搜索OpenSSH并安装。
 然后以管理员身份运行PowerShell
@@ -271,6 +274,11 @@ Set-Service -Name sshd -StartupType &#39;Automatic&#39;1 2 3 4 5 6 7 8 9 10 11 
     <li><a href="#将仓库拉到本地">将仓库拉到本地</a></li>
     <li><a href="#添加静态网页文件添加到本地仓库">添加静态网页文件添加到本地仓库</a></li>
     <li><a href="#提交到github仓库">提交到github仓库</a></li>
+    <li><a href="#后续将本地生成的网页文件同步到仓库中的流程">后续将本地生成的网页文件同步到仓库中的流程</a>
+      <ol>
+        <li><a href="#通过hugo构建网页">通过Hugo构建网页</a></li>
+      </ol>
+    </li>
     <li><a href="#报错及解决方案">报错及解决方案</a>
       <ol>
         <li><a href="#生成密钥时报错">生成密钥时报错</a></li>
@@ -388,6 +396,9 @@ Set-Service -Name sshd -StartupType &#39;Automatic&#39;1 2 3 4 5 6 7 8 9 10 11 
 <h2 id="提交到github仓库">提交到github仓库</h2>
 <p><code>git push -u origin main</code></p>
 <p>如果在此之前没有绑定过仓库，还需要绑定一下。</p>
+<h2 id="后续将本地生成的网页文件同步到仓库中的流程">后续将本地生成的网页文件同步到仓库中的流程</h2>
+<h3 id="通过hugo构建网页">通过Hugo构建网页</h3>
+<p>在本地项目根目录打开<code>cmd</code>并输入<code>hugo</code></p>
 <h2 id="报错及解决方案">报错及解决方案</h2>
 <h3 id="生成密钥时报错">生成密钥时报错</h3>
 <p>报错内容：bash: ~ssh-keygen: command not found<br>

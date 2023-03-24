@@ -6,13 +6,13 @@
         <description>Recent content on 望远山而前行 - 王诗文的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 18 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>曲面建模注意事项汇总</title>
         <link>https://bi1kbu.github.io/p/creo-surface-modeling/</link>
-        <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
         
         <guid>https://bi1kbu.github.io/p/creo-surface-modeling/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post 曲面建模注意事项汇总" /&gt;&lt;h2 id=&#34;曲面宜长不宜短&#34;&gt;曲面宜长不宜短&lt;/h2&gt;
+        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941.png" alt="Featured image of post 曲面建模注意事项汇总" /&gt;&lt;h2 id=&#34;曲面宜长不宜短&#34;&gt;曲面宜长不宜短&lt;/h2&gt;
 &lt;p&gt;最先遇到的问题：在生成实体时发现出现了报错，仔细检查后认为问题出在了两个曲面的缝隙上。&lt;/p&gt;
 &lt;p&gt;这个缝隙并非建模时没有用同一根曲面，而且Creo的精度系统带来的，而当时我并没有将两个曲面做的足够长，所以后期修补起来极其麻烦。&lt;/p&gt;
 &lt;h2 id=&#34;曲面-相交-修剪-与-合并的对比&#34;&gt;曲面-相交-修剪 与 合并的对比&lt;/h2&gt;
@@ -52,7 +52,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;去除凸起&#34;&gt;去除凸起&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;可使用&lt;code&gt;偏移&lt;/code&gt;→&lt;code&gt;替换曲面特征&lt;/code&gt;来实现&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;可使用&lt;code&gt;偏移&lt;/code&gt;→&lt;code&gt;替换曲面特征&lt;/code&gt;来实现&lt;/strong&gt;&lt;br&gt;
 大面&lt;code&gt;crtl+c&lt;/code&gt;、&lt;code&gt;ctrl+v&lt;/code&gt;然后小面进行&lt;code&gt;偏移&lt;/code&gt;→&lt;code&gt;替换曲面特征&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;有小面的应先去&lt;code&gt;移除&lt;/code&gt;小面&lt;/p&gt;
 &lt;p&gt;第一步：复制修整的基准面&lt;/p&gt;
@@ -171,6 +171,9 @@
 &lt;h2 id=&#34;提交到github仓库&#34;&gt;提交到github仓库&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;git push -u origin main&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;如果在此之前没有绑定过仓库，还需要绑定一下。&lt;/p&gt;
+&lt;h2 id=&#34;后续将本地生成的网页文件同步到仓库中的流程&#34;&gt;后续将本地生成的网页文件同步到仓库中的流程&lt;/h2&gt;
+&lt;h3 id=&#34;通过hugo构建网页&#34;&gt;通过Hugo构建网页&lt;/h3&gt;
+&lt;p&gt;在本地项目根目录打开&lt;code&gt;cmd&lt;/code&gt;并输入&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;报错及解决方案&#34;&gt;报错及解决方案&lt;/h2&gt;
 &lt;h3 id=&#34;生成密钥时报错&#34;&gt;生成密钥时报错&lt;/h3&gt;
 &lt;p&gt;报错内容：bash: ~ssh-keygen: command not found&lt;br&gt;
