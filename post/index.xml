@@ -75,7 +75,8 @@
         <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
         
         <guid>https://bi1kbu.github.io/p/creo-surface-modeling/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941.png" alt="Featured image of post 曲面建模注意事项汇总" /&gt;&lt;h2 id=&#34;曲面宜长不宜短&#34;&gt;曲面宜长不宜短&lt;/h2&gt;
+        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941.png" alt="Featured image of post 曲面建模注意事项汇总" /&gt;&lt;p&gt;入职乐森机器人有一段时间了，最近在学习Creo曲面建模，出了不少问题，学校学的和工作需要的确实相差极大。简单写了些遇到的问题，备忘。&lt;/p&gt;
+&lt;h2 id=&#34;曲面宜长不宜短&#34;&gt;曲面宜长不宜短&lt;/h2&gt;
 &lt;p&gt;最先遇到的问题：在生成实体时发现出现了报错，仔细检查后认为问题出在了两个曲面的缝隙上。&lt;/p&gt;
 &lt;p&gt;这个缝隙并非建模时没有用同一根曲面，而且Creo的精度系统带来的，而当时我并没有将两个曲面做的足够长，所以后期修补起来极其麻烦。&lt;/p&gt;
 &lt;h2 id=&#34;曲面-相交-修剪-与-合并的对比&#34;&gt;曲面-相交-修剪 与 合并的对比&lt;/h2&gt;
