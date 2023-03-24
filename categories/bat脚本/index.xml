@@ -7,12 +7,12 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/categories/bat%E8%84%9A%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>使用bat脚本实现一键同步</title>
+        <title>使用bat脚本实现一键同步Hugo博客</title>
         <link>https://bi1kbu.github.io/p/creo-surface-modeling/</link>
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
         
         <guid>https://bi1kbu.github.io/p/creo-surface-modeling/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png" alt="Featured image of post 使用bat脚本实现一键同步" /&gt;&lt;h2 id=&#34;基本思路&#34;&gt;基本思路&lt;/h2&gt;
+        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png" alt="Featured image of post 使用bat脚本实现一键同步Hugo博客" /&gt;&lt;h2 id=&#34;基本思路&#34;&gt;基本思路&lt;/h2&gt;
 &lt;p&gt;通过bat脚本实现一键执行命令。bat脚本放在根目录下，同时将github的本地空间设置在public文件夹内，才可以用。&lt;/p&gt;
 &lt;p&gt;bat在根目录下，双击运行后首先编译Hugo文件，然后切换到public文件夹内。&lt;/p&gt;
 &lt;p&gt;拉取github工作空间，确保文件一致。&lt;/p&gt;
