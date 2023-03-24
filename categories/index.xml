@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on 望远山而前行 - 王诗文的博客</title>
-        <link>https://bi1kbu.github.io/categories/</link>
+        <link>https://bi1kbu.asacr.org/categories/</link>
         <description>Recent content in Categories on 望远山而前行 - 王诗文的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.asacr.org/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>bat脚本</title>
-        <link>https://bi1kbu.github.io/categories/bat%E8%84%9A%E6%9C%AC/</link>
+        <link>https://bi1kbu.asacr.org/categories/bat%E8%84%9A%E6%9C%AC/</link>
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/categories/bat%E8%84%9A%E6%9C%AC/</guid>
+        <guid>https://bi1kbu.asacr.org/categories/bat%E8%84%9A%E6%9C%AC/</guid>
         <description></description>
         </item>
         <item>
         <title>技术类</title>
-        <link>https://bi1kbu.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</link>
+        <link>https://bi1kbu.asacr.org/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</link>
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</guid>
+        <guid>https://bi1kbu.asacr.org/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/</guid>
         <description></description>
         </item>
         <item>
         <title>Creo</title>
-        <link>https://bi1kbu.github.io/categories/creo/</link>
+        <link>https://bi1kbu.asacr.org/categories/creo/</link>
         <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/categories/creo/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/categories/creo/image-20230324225450640.png" alt="Featured image of post Creo" /&gt;</description>
+        <guid>https://bi1kbu.asacr.org/categories/creo/</guid>
+        <description>&lt;img src="https://bi1kbu.asacr.org/categories/creo/image-20230324225450640.png" alt="Featured image of post Creo" /&gt;</description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>https://bi1kbu.github.io/categories/hugo/</link>
+        <link>https://bi1kbu.asacr.org/categories/hugo/</link>
         <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/categories/hugo/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/categories/hugo/wx_20230313102459.png" alt="Featured image of post Hugo" /&gt;</description>
+        <guid>https://bi1kbu.asacr.org/categories/hugo/</guid>
+        <description>&lt;img src="https://bi1kbu.asacr.org/categories/hugo/wx_20230313102459.png" alt="Featured image of post Hugo" /&gt;</description>
         </item>
         
     </channel>

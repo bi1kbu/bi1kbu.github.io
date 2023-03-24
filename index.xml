@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>望远山而前行 - 王诗文的博客</title>
-        <link>https://bi1kbu.github.io/</link>
+        <link>https://bi1kbu.asacr.org/</link>
         <description>Recent content on 望远山而前行 - 王诗文的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.asacr.org/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>使用bat脚本实现一键同步Hugo博客</title>
-        <link>https://bi1kbu.github.io/p/creo-surface-modeling/</link>
+        <link>https://bi1kbu.asacr.org/p/creo-surface-modeling/</link>
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/p/creo-surface-modeling/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png" alt="Featured image of post 使用bat脚本实现一键同步Hugo博客" /&gt;&lt;h2 id=&#34;基本思路&#34;&gt;基本思路&lt;/h2&gt;
+        <guid>https://bi1kbu.asacr.org/p/creo-surface-modeling/</guid>
+        <description>&lt;img src="https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230324222506567.png" alt="Featured image of post 使用bat脚本实现一键同步Hugo博客" /&gt;&lt;h2 id=&#34;基本思路&#34;&gt;基本思路&lt;/h2&gt;
 &lt;p&gt;通过bat脚本实现一键执行命令。bat脚本放在根目录下，同时将github的本地空间设置在public文件夹内，才可以用。&lt;/p&gt;
 &lt;p&gt;bat在根目录下，双击运行后首先编译Hugo文件，然后切换到public文件夹内。&lt;/p&gt;
 &lt;p&gt;拉取github工作空间，确保文件一致。&lt;/p&gt;
@@ -20,10 +20,10 @@
 &lt;p&gt;&lt;code&gt;set /p info=&lt;/code&gt;主要目的是中途停下来，方便输入本次上传的摘要。&lt;/p&gt;
 &lt;p&gt;最后将文件提交到github空间。&lt;/p&gt;
 &lt;p&gt;pause即&amp;quot;按任意键结束&amp;quot;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230324222506567.png&#34;
 	width=&#34;1239&#34;
 	height=&#34;647&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567_hu1ab99d01b8ca3a37daf275ed2541c9e8_66599_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567_hu1ab99d01b8ca3a37daf275ed2541c9e8_66599_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230324222506567_hu1ab99d01b8ca3a37daf275ed2541c9e8_66599_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230324222506567_hu1ab99d01b8ca3a37daf275ed2541c9e8_66599_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230324222506567&#34;
@@ -34,7 +34,7 @@
 		data-flex-basis=&#34;459px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/index.assets/image-20230324222448444.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/index.assets/image-20230324222448444.png&#34;
 	
 	
 	
@@ -71,11 +71,11 @@
         </item>
         <item>
         <title>曲面建模注意事项汇总</title>
-        <link>https://bi1kbu.github.io/p/creo-surface-modeling/</link>
+        <link>https://bi1kbu.asacr.org/p/creo-surface-modeling/</link>
         <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/p/creo-surface-modeling/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941.png" alt="Featured image of post 曲面建模注意事项汇总" /&gt;&lt;p&gt;入职乐森机器人有一段时间了，最近在学习Creo曲面建模，出了不少问题，学校学的和工作需要的确实相差极大。简单写了些遇到的问题，备忘。&lt;/p&gt;
+        <guid>https://bi1kbu.asacr.org/p/creo-surface-modeling/</guid>
+        <description>&lt;img src="https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104910941.png" alt="Featured image of post 曲面建模注意事项汇总" /&gt;&lt;p&gt;入职乐森机器人有一段时间了，最近在学习Creo曲面建模，出了不少问题，学校学的和工作需要的确实相差极大。简单写了些遇到的问题，备忘。&lt;/p&gt;
 &lt;h2 id=&#34;曲面宜长不宜短&#34;&gt;曲面宜长不宜短&lt;/h2&gt;
 &lt;p&gt;最先遇到的问题：在生成实体时发现出现了报错，仔细检查后认为问题出在了两个曲面的缝隙上。&lt;/p&gt;
 &lt;p&gt;这个缝隙并非建模时没有用同一根曲面，而且Creo的精度系统带来的，而当时我并没有将两个曲面做的足够长，所以后期修补起来极其麻烦。&lt;/p&gt;
@@ -86,10 +86,10 @@
 &lt;p&gt;尝试过用&lt;code&gt;拉伸&lt;/code&gt;、&lt;code&gt;加厚&lt;/code&gt;等方式，均没有处理成功，&lt;/p&gt;
 &lt;p&gt;最终解决方案是使用曲面&lt;code&gt;移除&lt;/code&gt;命令实现，将缝隙一面选中后移除。&lt;/p&gt;
 &lt;p&gt;移除前：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104440595.png&#34;
 	width=&#34;3721&#34;
 	height=&#34;1778&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230315104440595&#34;
@@ -101,10 +101,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;移除后：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104451800.png&#34;
 	width=&#34;3255&#34;
 	height=&#34;1778&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230315104451800&#34;
@@ -120,10 +120,10 @@
 大面&lt;code&gt;crtl+c&lt;/code&gt;、&lt;code&gt;ctrl+v&lt;/code&gt;然后小面进行&lt;code&gt;偏移&lt;/code&gt;→&lt;code&gt;替换曲面特征&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;有小面的应先去&lt;code&gt;移除&lt;/code&gt;小面&lt;/p&gt;
 &lt;p&gt;第一步：复制修整的基准面&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104618314.png&#34;
 	width=&#34;3255&#34;
 	height=&#34;1778&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230315104618314&#34;
@@ -135,10 +135,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;第二步：点击要移除的曲面，点击&lt;code&gt;偏移&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104837515.png&#34;
 	width=&#34;3727&#34;
 	height=&#34;2088&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230315104837515&#34;
@@ -150,10 +150,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;第三步：选择&lt;code&gt;替换曲面特征&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104910941.png&#34;
 	width=&#34;443&#34;
 	height=&#34;389&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230315104910941&#34;
@@ -165,10 +165,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;第四步：点击之前辅助爹基准面，即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104938541.png&#34;
 	width=&#34;3255&#34;
 	height=&#34;1778&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230315104938541&#34;
@@ -182,10 +182,10 @@
 &lt;h2 id=&#34;出现倒扣的问题&#34;&gt;出现倒扣的问题&lt;/h2&gt;
 &lt;p&gt;主要问题在于最开始做面的时候曲率没有全部在外面，不仅需要和分型面成90°，还需要把曲率进行调整。&lt;/p&gt;
 &lt;p&gt;错误的：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104322433.png&#34;
 	width=&#34;2293&#34;
 	height=&#34;764&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230315104322433&#34;
@@ -196,10 +196,10 @@
 		data-flex-basis=&#34;720px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;正确的：&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789.png&#34;
+&lt;p&gt;正确的：&lt;img src=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104235789.png&#34;
 	width=&#34;2856&#34;
 	height=&#34;960&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;image-20230315104235789&#34;
@@ -214,11 +214,11 @@
         </item>
         <item>
         <title>使用Github Pages部署上线Hugo博客</title>
-        <link>https://bi1kbu.github.io/p/hugo-launch/</link>
+        <link>https://bi1kbu.asacr.org/p/hugo-launch/</link>
         <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/p/hugo-launch/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/p/hugo-launch/wx_20230313130937.png" alt="Featured image of post 使用Github Pages部署上线Hugo博客" /&gt;&lt;h2 id=&#34;基本流程&#34;&gt;基本流程&lt;/h2&gt;
+        <guid>https://bi1kbu.asacr.org/p/hugo-launch/</guid>
+        <description>&lt;img src="https://bi1kbu.asacr.org/p/hugo-launch/wx_20230313130937.png" alt="Featured image of post 使用Github Pages部署上线Hugo博客" /&gt;&lt;h2 id=&#34;基本流程&#34;&gt;基本流程&lt;/h2&gt;
 &lt;p&gt;创建一个GithubPages仓库
 将仓库拉到本地
 添加静态网页文件添加到本地仓库
@@ -238,7 +238,7 @@
 &lt;h2 id=&#34;后续将本地生成的网页文件同步到仓库中的流程&#34;&gt;后续将本地生成的网页文件同步到仓库中的流程&lt;/h2&gt;
 &lt;h3 id=&#34;通过hugo构建网页&#34;&gt;通过Hugo构建网页&lt;/h3&gt;
 &lt;p&gt;在本地项目根目录打开&lt;code&gt;cmd&lt;/code&gt;并输入&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/index.assets/image-20230324204417890.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/index.assets/image-20230324204417890.png&#34;
 	
 	
 	
@@ -250,7 +250,7 @@
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;将生成的文件复制到本地仓库&#34;&gt;将生成的文件复制到本地仓库&lt;/h3&gt;
 &lt;p&gt;生成的文件在根目录下public文件夹内，我的本地仓库也在里面，所以不需要复制，此步骤跳过。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/index.assets/image-20230324204540832.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/index.assets/image-20230324204540832.png&#34;
 	
 	
 	
@@ -262,7 +262,7 @@
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;添加文件到同步列表中&#34;&gt;添加文件到同步列表中&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/index.assets/image-20230324204813767.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/index.assets/image-20230324204813767.png&#34;
 	
 	
 	
@@ -323,30 +323,30 @@ Start-Service sshd&lt;/p&gt;
         </item>
         <item>
         <title>关于</title>
-        <link>https://bi1kbu.github.io/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://bi1kbu.asacr.org/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://bi1kbu.asacr.org/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;下次一定.jpg&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Hugo博客美化（未完）</title>
-        <link>https://bi1kbu.github.io/p/hugo-development/</link>
+        <link>https://bi1kbu.asacr.org/p/hugo-development/</link>
         <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/p/hugo-development/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/p/hugo-development/wx_20230312184348.png" alt="Featured image of post Hugo博客美化（未完）" /&gt;&lt;h2 id=&#34;前期计划&#34;&gt;前期计划&lt;/h2&gt;
+        <guid>https://bi1kbu.asacr.org/p/hugo-development/</guid>
+        <description>&lt;img src="https://bi1kbu.asacr.org/p/hugo-development/wx_20230312184348.png" alt="Featured image of post Hugo博客美化（未完）" /&gt;&lt;h2 id=&#34;前期计划&#34;&gt;前期计划&lt;/h2&gt;
 &lt;p&gt;　&lt;/p&gt;
 &lt;h2 id=&#34;去除国际化&#34;&gt;去除国际化&lt;/h2&gt;
 &lt;p&gt;　　因为我的外文确实不咋地，而且也没打算让我的博客写出国，更多的还是自己留着慢慢总结积累，万一用得上呢(bushi&lt;br&gt;
 　　首先在根目录下的配置文件“config.yaml”中将languages部分删掉，保留中文部分的title。
 然后将languageCode改为“zh-cn”&lt;br&gt;
 　　左图是处理前，右图是处理后。
-&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312184348.png&#34;
+&lt;img src=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312184348.png&#34;
 	width=&#34;1918&#34;
 	height=&#34;1030&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/hugo-development/wx_20230312184348_huba3a0cbdfc6932219658b6cc6860c32f_120735_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -360,10 +360,10 @@ Start-Service sshd&lt;/p&gt;
 &lt;h2 id=&#34;修改博主名字博客网站标题和网站简介&#34;&gt;修改博主名字、博客网站标题和网站简介&lt;/h2&gt;
 &lt;p&gt;　　由于我使用的主题没有提供单独的博主名字设置和主页标题设置，所以博主名字我直接在主题里进行了修改。
 　　左侧页面名字位置的配置在“blog\themes\hugo-theme-stack\layouts\partials\sidebar\left.html”文件中，找到这个文件的方法是在网页中审查元素，找到关键词后进行查找，最终定位到这个位置。图中红色框是我修改后的内容，蓝色框是审查元素找到的内容。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192010.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192010.png&#34;
 	width=&#34;349&#34;
 	height=&#34;392&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192010_hu0f5042bf6316465d106c190abde006e8_18083_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312192010_hu0f5042bf6316465d106c190abde006e8_18083_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192010_hu0f5042bf6316465d106c190abde006e8_18083_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192010_hu0f5042bf6316465d106c190abde006e8_18083_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -371,10 +371,10 @@ Start-Service sshd&lt;/p&gt;
 		data-flex-grow=&#34;89&#34;
 		data-flex-basis=&#34;213px&#34;
 	
-&gt; &lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312191842.png&#34;
+&gt; &lt;img src=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312191842.png&#34;
 	width=&#34;754&#34;
 	height=&#34;755&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312191842_hu3a4c68a7470d5c8dbabcec9c3eaab9d7_60220_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312191842_hu3a4c68a7470d5c8dbabcec9c3eaab9d7_60220_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312191842_hu3a4c68a7470d5c8dbabcec9c3eaab9d7_60220_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/hugo-development/wx_20230312191842_hu3a4c68a7470d5c8dbabcec9c3eaab9d7_60220_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -384,10 +384,10 @@ Start-Service sshd&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;　　博客网站的标题和简介可以直接在根目录下的配置文件中修改：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192559.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192559.png&#34;
 	width=&#34;738&#34;
 	height=&#34;747&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192559_hu961a0bbbae52e8bf48aab00443f2f32b_52210_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312192559_hu961a0bbbae52e8bf48aab00443f2f32b_52210_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192559_hu961a0bbbae52e8bf48aab00443f2f32b_52210_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192559_hu961a0bbbae52e8bf48aab00443f2f32b_52210_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -397,10 +397,10 @@ Start-Service sshd&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;　　首页博主名字下面的介绍也可以在根目录的配置中修改：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192911.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192911.png&#34;
 	width=&#34;741&#34;
 	height=&#34;747&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/hugo-development/wx_20230312192911_huc39e8fb6d40c3d6a3136ea6ea3a75dd4_29845_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-development/wx_20230312192911_huc39e8fb6d40c3d6a3136ea6ea3a75dd4_29845_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192911_huc39e8fb6d40c3d6a3136ea6ea3a75dd4_29845_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/hugo-development/wx_20230312192911_huc39e8fb6d40c3d6a3136ea6ea3a75dd4_29845_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -435,18 +435,18 @@ Start-Service sshd&lt;/p&gt;
         </item>
         <item>
         <title>第一篇博客，讲讲我在搭建Hugo博客时踩过的坑</title>
-        <link>https://bi1kbu.github.io/p/hugo-install/</link>
+        <link>https://bi1kbu.asacr.org/p/hugo-install/</link>
         <pubDate>Sun, 12 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/p/hugo-install/</guid>
-        <description>&lt;img src="https://bi1kbu.github.io/p/hugo-install/wx_20230312153745.png" alt="Featured image of post 第一篇博客，讲讲我在搭建Hugo博客时踩过的坑" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+        <guid>https://bi1kbu.asacr.org/p/hugo-install/</guid>
+        <description>&lt;img src="https://bi1kbu.asacr.org/p/hugo-install/wx_20230312153745.png" alt="Featured image of post 第一篇博客，讲讲我在搭建Hugo博客时踩过的坑" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;　　在我最开始想搭建一个Hugo博客时，如何获取资料成了最大的问题。&lt;/p&gt;
 &lt;p&gt;　　对于一个英语基本为零，计算机知识只能算略懂的人而言，直接到github并不是一个很好的选择，所以我选择到B站上看一看其他人是怎么做的。但是有一个问题，视频的知识密度并不如文字，对于需要一步一步跟着做的工作来说，看视频还是比较费时间。所以，百度。但是百度和CSDN等又全是些重复的、没有实际帮助的内容。在和ifLab社团同学聊天求助的时候，某大佬对于我提出的一个bug，给出了ChatGPT的答案，这让我才想起来，我还可以问ChatGPT。（所以说，还是没形成先问问AI的习惯）&lt;/p&gt;
 &lt;p&gt;　　事实证明，ChatGPT给出的答案还不错，而且比起官方文档用软件翻译为中文看起来更像人话。
-&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312160744.png&#34;
+&lt;img src=&#34;https://bi1kbu.asacr.org/p/hugo-install/wx_20230312160744.png&#34;
 	width=&#34;1044&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312160744_hufb44bd0cd8dcaee90ca1357b5caba991_35598_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-install/wx_20230312160744_hufb44bd0cd8dcaee90ca1357b5caba991_35598_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/hugo-install/wx_20230312160744_hufb44bd0cd8dcaee90ca1357b5caba991_35598_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/hugo-install/wx_20230312160744_hufb44bd0cd8dcaee90ca1357b5caba991_35598_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -577,10 +577,10 @@ Start-Service sshd&lt;/p&gt;
 &lt;/div&gt;&lt;p&gt;　　这个指令代表着将hugo-theme-stack主题克隆到自己博客网站的themes文件夹内，这个文件夹是用来专门放置主题的，所有文件夹的功能介绍可以在本文后面的“Hugo目录结构介绍”里找到。&lt;br&gt;
 　　或者可以通过Code→Download ZIP，并将下载的主题解压缩到themes文件夹内，需要注意的是，通过这种方式下载下来的文件夹后面会带有一个-master后缀，需要删掉（说是会有bug，但是我没试，直接按网上教程给的走了）。&lt;br&gt;
 　　最终效果如图所示：
-&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312174309.png&#34;
+&lt;img src=&#34;https://bi1kbu.asacr.org/p/hugo-install/wx_20230312174309.png&#34;
 	width=&#34;717&#34;
 	height=&#34;191&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312174309_hud057d39d47b351c5f897a45fee25aa04_27706_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-install/wx_20230312174309_hud057d39d47b351c5f897a45fee25aa04_27706_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/hugo-install/wx_20230312174309_hud057d39d47b351c5f897a45fee25aa04_27706_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/hugo-install/wx_20230312174309_hud057d39d47b351c5f897a45fee25aa04_27706_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -610,10 +610,10 @@ Start-Service sshd&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;　　把“content”文件和“config.yaml”文件复制到博客根目录，并删掉原来的配置文件（如果文件拓展名一样，在复制时直接点击替换就可以了）。如图：&lt;br&gt;
-&lt;img src=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312175353.png&#34;
+&lt;img src=&#34;https://bi1kbu.asacr.org/p/hugo-install/wx_20230312175353.png&#34;
 	width=&#34;589&#34;
 	height=&#34;378&#34;
-	srcset=&#34;https://bi1kbu.github.io/p/hugo-install/wx_20230312175353_hu6700104967ec44f5d040375f364118cc_20599_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/hugo-install/wx_20230312175353_hu6700104967ec44f5d040375f364118cc_20599_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://bi1kbu.asacr.org/p/hugo-install/wx_20230312175353_hu6700104967ec44f5d040375f364118cc_20599_480x0_resize_box_3.png 480w, https://bi1kbu.asacr.org/p/hugo-install/wx_20230312175353_hu6700104967ec44f5d040375f364118cc_20599_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -673,26 +673,26 @@ Start-Service sshd&lt;/p&gt;
         </item>
         <item>
         <title>博客</title>
-        <link>https://bi1kbu.github.io/archives/</link>
+        <link>https://bi1kbu.asacr.org/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/archives/</guid>
+        <guid>https://bi1kbu.asacr.org/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>搜索</title>
-        <link>https://bi1kbu.github.io/search/</link>
+        <link>https://bi1kbu.asacr.org/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/search/</guid>
+        <guid>https://bi1kbu.asacr.org/search/</guid>
         <description></description>
         </item>
         <item>
         <title>链接</title>
-        <link>https://bi1kbu.github.io/%E9%93%BE%E6%8E%A5/</link>
+        <link>https://bi1kbu.asacr.org/%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://bi1kbu.github.io/%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://bi1kbu.asacr.org/%E9%93%BE%E6%8E%A5/</guid>
         <description>&lt;p&gt;放了社团的一些链接，欢迎访问。&lt;/p&gt;
 </description>
         </item>
