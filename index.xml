@@ -253,9 +253,8 @@ Start-Service sshd&lt;/p&gt;
 &lt;/div&gt;&lt;h3 id=&#34;上传时报错&#34;&gt;上传时报错&lt;/h3&gt;
 &lt;p&gt;报错&lt;/p&gt;
 &lt;p&gt;​    error: failed to push some refs to &amp;lsquo;github.com:bi1kbu/bi1kbu.github.io.git&amp;rsquo;&lt;/p&gt;
-&lt;p&gt;解决方案：从github仓库同步到本地&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git remote add origin git@github.com:bi1kbu/bi1kbu.github.io.git&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;（记得将public文件夹内的文件重新复制过来）&lt;/p&gt;
+&lt;p&gt;解决方案：从github仓库拉取到本地后再上传&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git pull origin master&lt;/code&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
