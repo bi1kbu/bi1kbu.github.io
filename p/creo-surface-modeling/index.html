@@ -10,7 +10,7 @@
 <meta property='og:description' content='bat脚本放在根目录下，同时将github的本地空间设置在public文件夹内，才可以用。'>
 <meta property='og:url' content='https://bi1kbu.github.io/p/creo-surface-modeling/'>
 <meta property='og:site_name' content='望远山而前行 - 王诗文的博客'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-03-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-18T00:00:00&#43;00:00'/><meta property='og:image' content='https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-03-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-24T00:00:00&#43;00:00'/><meta property='og:image' content='https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png' />
 <meta name="twitter:title" content="使用bat脚本实现一键同步Hugo博客">
 <meta name="twitter:description" content="bat脚本放在根目录下，同时将github的本地空间设置在public文件夹内，才可以用。"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png' />
@@ -230,11 +230,8 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#曲面宜长不宜短">曲面宜长不宜短</a></li>
-    <li><a href="#曲面-相交-修剪-与-合并的对比">曲面-相交-修剪 与 合并的对比</a></li>
-    <li><a href="#两实体中间有缝隙">两实体中间有缝隙</a></li>
-    <li><a href="#去除凸起">去除凸起</a></li>
-    <li><a href="#出现倒扣的问题">出现倒扣的问题</a></li>
+    <li><a href="#基本思路">基本思路</a></li>
+    <li><a href="#bat文件全文">bat文件全文</a></li>
   </ol>
 </nav>
         </div>
@@ -255,7 +252,7 @@
                         width="800" 
                         height="418" 
                         loading="lazy"
-                        alt="Featured image of post 曲面建模注意事项汇总" />
+                        alt="Featured image of post 使用bat脚本实现一键同步Hugo博客" />
                 
             </a>
         </div>
@@ -269,8 +266,8 @@
                 bat脚本
             </a>
         
-            <a href="/categories/%E6%8A%80%E6%9C%AF/" >
-                技术
+            <a href="/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/" >
+                技术类
             </a>
         
     </header>
@@ -334,141 +331,62 @@
     <section class="article-content">
     
     
-    <h2 id="曲面宜长不宜短">曲面宜长不宜短</h2>
-<p>最先遇到的问题：在生成实体时发现出现了报错，仔细检查后认为问题出在了两个曲面的缝隙上。</p>
-<p>这个缝隙并非建模时没有用同一根曲面，而且Creo的精度系统带来的，而当时我并没有将两个曲面做的足够长，所以后期修补起来极其麻烦。</p>
-<h2 id="曲面-相交-修剪-与-合并的对比">曲面-相交-修剪 与 合并的对比</h2>
-<p>两个曲面想要在一条线上交会并形成一体，最好的方案还是曲面<code>合并</code>。</p>
-<p>在最开始的时候我不了解<code>合并</code>命令时是可以指定合并方向并自动修剪的，所以采用了相交后<code>修剪</code>的方式，也是给上述报错留下了隐患。</p>
-<h2 id="两实体中间有缝隙">两实体中间有缝隙</h2>
-<p>尝试过用<code>拉伸</code>、<code>加厚</code>等方式，均没有处理成功，</p>
-<p>最终解决方案是使用曲面<code>移除</code>命令实现，将缝隙一面选中后移除。</p>
-<p>移除前：</p>
-<p><img src="/p/creo-surface-modeling/image-20230315104440595.png"
-	width="3721"
-	height="1778"
-	srcset="/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_1024x0_resize_box_3.png 1024w"
+    <h2 id="基本思路">基本思路</h2>
+<p>通过bat脚本实现一键执行命令。bat脚本放在根目录下，同时将github的本地空间设置在public文件夹内，才可以用。</p>
+<p>bat在根目录下，双击运行后首先编译Hugo文件，然后切换到public文件夹内。</p>
+<p>拉取github工作空间，确保文件一致。</p>
+<p>添加所有文件到队列。</p>
+<p><code>set /p info=</code>主要目的是中途停下来，方便输入本次上传的摘要。</p>
+<p>最后将文件提交到github空间。</p>
+<p>pause即&quot;按任意键结束&quot;。</p>
+<p><img src="/p/creo-surface-modeling/image-20230324222506567.png"
+	width="1239"
+	height="647"
+	srcset="/p/creo-surface-modeling/image-20230324222506567_hu1ab99d01b8ca3a37daf275ed2541c9e8_66599_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230324222506567_hu1ab99d01b8ca3a37daf275ed2541c9e8_66599_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
-		alt="image-20230315104440595"
+		alt="image-20230324222506567"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="209"
-		data-flex-basis="502px"
+		data-flex-grow="191"
+		data-flex-basis="459px"
 	
 ></p>
-<p>移除后：</p>
-<p><img src="/p/creo-surface-modeling/image-20230315104451800.png"
-	width="3255"
-	height="1778"
-	srcset="/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_1024x0_resize_box_3.png 1024w"
+<p><img src="/index.assets/image-20230324222448444.png"
+	
+	
+	
 	loading="lazy"
 	
-		alt="image-20230315104451800"
+		alt="image-20230324222448444"
 	
-	
-		class="gallery-image" 
-		data-flex-grow="183"
-		data-flex-basis="439px"
 	
 ></p>
-<h2 id="去除凸起">去除凸起</h2>
-<p><strong>可使用<code>偏移</code>→<code>替换曲面特征</code>来实现</strong><br>
-大面<code>crtl+c</code>、<code>ctrl+v</code>然后小面进行<code>偏移</code>→<code>替换曲面特征</code></p>
-<p>有小面的应先去<code>移除</code>小面</p>
-<p>第一步：复制修整的基准面</p>
-<p><img src="/p/creo-surface-modeling/image-20230315104618314.png"
-	width="3255"
-	height="1778"
-	srcset="/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="image-20230315104618314"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="183"
-		data-flex-basis="439px"
-	
-></p>
-<p>第二步：点击要移除的曲面，点击<code>偏移</code></p>
-<p><img src="/p/creo-surface-modeling/image-20230315104837515.png"
-	width="3727"
-	height="2088"
-	srcset="/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="image-20230315104837515"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="178"
-		data-flex-basis="428px"
-	
-></p>
-<p>第三步：选择<code>替换曲面特征</code></p>
-<p><img src="/p/creo-surface-modeling/image-20230315104910941.png"
-	width="443"
-	height="389"
-	srcset="/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="image-20230315104910941"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="113"
-		data-flex-basis="273px"
-	
-></p>
-<p>第四步：点击之前辅助爹基准面，即可</p>
-<p><img src="/p/creo-surface-modeling/image-20230315104938541.png"
-	width="3255"
-	height="1778"
-	srcset="/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="image-20230315104938541"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="183"
-		data-flex-basis="439px"
-	
-></p>
-<h2 id="出现倒扣的问题">出现倒扣的问题</h2>
-<p>主要问题在于最开始做面的时候曲率没有全部在外面，不仅需要和分型面成90°，还需要把曲率进行调整。</p>
-<p>错误的：</p>
-<p><img src="/p/creo-surface-modeling/image-20230315104322433.png"
-	width="2293"
-	height="764"
-	srcset="/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="image-20230315104322433"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="300"
-		data-flex-basis="720px"
-	
-></p>
-<p>正确的：<img src="/p/creo-surface-modeling/image-20230315104235789.png"
-	width="2856"
-	height="960"
-	srcset="/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_480x0_resize_box_3.png 480w, /p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="image-20230315104235789"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="297"
-		data-flex-basis="714px"
-	
-></p>
-
+<h2 id="bat文件全文">bat文件全文</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl">cd .\public
+</span></span><span class="line"><span class="cl">git pull origin master
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">set /p info=输入提交说明，如版本号。 :
+</span></span><span class="line"><span class="cl">git commit -m &#34;%info%&#34;
+</span></span><span class="line"><span class="cl">git push origin master
+</span></span><span class="line"><span class="cl">pause
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
 </section>
 
 
@@ -500,7 +418,7 @@
                         width="250" 
                         height="150" 
                         loading="lazy"
-                        alt="Featured image of post 使用bat脚本实现一键同步Hugo博客"
+                        alt="Featured image of post 曲面建模注意事项汇总"
                         data-key="creo-surface-modeling" 
                         data-hash="md5-nYh5khqdQcV3bzvLmbepVw==">
                 
@@ -508,7 +426,79 @@
         
 
         <div class="article-details">
-            <h2 class="article-title">使用bat脚本实现一键同步Hugo博客</h2>
+            <h2 class="article-title">曲面建模注意事项汇总</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-launch/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo-launch/wx_20230313130937.dcc13d9b7a1e0d3f49300f97b22cf856_hu7e5e4a36377aad84e195282a989f8f73_207026_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 使用Github Pages部署上线Hugo博客"
+                        data-key="hugo-launch" 
+                        data-hash="md5-3ME9m3oeDT9JMA&#43;Xsiz4Vg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">使用Github Pages部署上线Hugo博客</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-development/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo-development/wx_20230312184348.b9c7bfa8167c91c430de024fb4c4199b_huba3a0cbdfc6932219658b6cc6860c32f_120735_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Hugo博客美化（未完）"
+                        data-key="hugo-development" 
+                        data-hash="md5-uce/qBZ8kcQw3gJPtMQZmw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo博客美化（未完）</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/hugo-install/">
+        
+        
+            <div class="article-image">
+                <img src="/p/hugo-install/wx_20230312153745.9901520b8072df41e5a9487f5fe43b41_hucdd5087cc4a7500436de73b01d7379f0_110512_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 第一篇博客，讲讲我在搭建Hugo博客时踩过的坑"
+                        data-key="hugo-install" 
+                        data-hash="md5-mQFSC4By30HlqUh/X&#43;Q7QQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">第一篇博客，讲讲我在搭建Hugo博客时踩过的坑</h2>
         </div>
     </a>
 </article>

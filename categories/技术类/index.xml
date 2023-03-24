@@ -6,7 +6,212 @@
         <description>Recent content in 技术类 on 望远山而前行 - 王诗文的博客</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://bi1kbu.github.io/categories/%E6%8A%80%E6%9C%AF%E7%B1%BB/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用bat脚本实现一键同步Hugo博客</title>
+        <link>https://bi1kbu.github.io/p/creo-surface-modeling/</link>
+        <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://bi1kbu.github.io/p/creo-surface-modeling/</guid>
+        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png" alt="Featured image of post 使用bat脚本实现一键同步Hugo博客" /&gt;&lt;h2 id=&#34;基本思路&#34;&gt;基本思路&lt;/h2&gt;
+&lt;p&gt;通过bat脚本实现一键执行命令。bat脚本放在根目录下，同时将github的本地空间设置在public文件夹内，才可以用。&lt;/p&gt;
+&lt;p&gt;bat在根目录下，双击运行后首先编译Hugo文件，然后切换到public文件夹内。&lt;/p&gt;
+&lt;p&gt;拉取github工作空间，确保文件一致。&lt;/p&gt;
+&lt;p&gt;添加所有文件到队列。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;set /p info=&lt;/code&gt;主要目的是中途停下来，方便输入本次上传的摘要。&lt;/p&gt;
+&lt;p&gt;最后将文件提交到github空间。&lt;/p&gt;
+&lt;p&gt;pause即&amp;quot;按任意键结束&amp;quot;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567.png&#34;
+	width=&#34;1239&#34;
+	height=&#34;647&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567_hu1ab99d01b8ca3a37daf275ed2541c9e8_66599_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230324222506567_hu1ab99d01b8ca3a37daf275ed2541c9e8_66599_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230324222506567&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;459px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/index.assets/image-20230324222448444.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230324222448444&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bat文件全文&#34;&gt;bat文件全文&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd .\public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git pull origin master
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;set /p info=输入提交说明，如版本号。 :
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &amp;#34;%info%&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin master
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pause
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>曲面建模注意事项汇总</title>
+        <link>https://bi1kbu.github.io/p/creo-surface-modeling/</link>
+        <pubDate>Sat, 18 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://bi1kbu.github.io/p/creo-surface-modeling/</guid>
+        <description>&lt;img src="https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941.png" alt="Featured image of post 曲面建模注意事项汇总" /&gt;&lt;h2 id=&#34;曲面宜长不宜短&#34;&gt;曲面宜长不宜短&lt;/h2&gt;
+&lt;p&gt;最先遇到的问题：在生成实体时发现出现了报错，仔细检查后认为问题出在了两个曲面的缝隙上。&lt;/p&gt;
+&lt;p&gt;这个缝隙并非建模时没有用同一根曲面，而且Creo的精度系统带来的，而当时我并没有将两个曲面做的足够长，所以后期修补起来极其麻烦。&lt;/p&gt;
+&lt;h2 id=&#34;曲面-相交-修剪-与-合并的对比&#34;&gt;曲面-相交-修剪 与 合并的对比&lt;/h2&gt;
+&lt;p&gt;两个曲面想要在一条线上交会并形成一体，最好的方案还是曲面&lt;code&gt;合并&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;在最开始的时候我不了解&lt;code&gt;合并&lt;/code&gt;命令时是可以指定合并方向并自动修剪的，所以采用了相交后&lt;code&gt;修剪&lt;/code&gt;的方式，也是给上述报错留下了隐患。&lt;/p&gt;
+&lt;h2 id=&#34;两实体中间有缝隙&#34;&gt;两实体中间有缝隙&lt;/h2&gt;
+&lt;p&gt;尝试过用&lt;code&gt;拉伸&lt;/code&gt;、&lt;code&gt;加厚&lt;/code&gt;等方式，均没有处理成功，&lt;/p&gt;
+&lt;p&gt;最终解决方案是使用曲面&lt;code&gt;移除&lt;/code&gt;命令实现，将缝隙一面选中后移除。&lt;/p&gt;
+&lt;p&gt;移除前：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595.png&#34;
+	width=&#34;3721&#34;
+	height=&#34;1778&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104440595_huf2d49d24f3dc8a50bb033edf6bdbaae3_334076_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104440595&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;209&#34;
+		data-flex-basis=&#34;502px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;移除后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800.png&#34;
+	width=&#34;3255&#34;
+	height=&#34;1778&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104451800_hu7f3eeb86b605e39d8a1bda493eaf5227_188378_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104451800&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;439px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;去除凸起&#34;&gt;去除凸起&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;可使用&lt;code&gt;偏移&lt;/code&gt;→&lt;code&gt;替换曲面特征&lt;/code&gt;来实现&lt;/strong&gt;&lt;br&gt;
+大面&lt;code&gt;crtl+c&lt;/code&gt;、&lt;code&gt;ctrl+v&lt;/code&gt;然后小面进行&lt;code&gt;偏移&lt;/code&gt;→&lt;code&gt;替换曲面特征&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;有小面的应先去&lt;code&gt;移除&lt;/code&gt;小面&lt;/p&gt;
+&lt;p&gt;第一步：复制修整的基准面&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314.png&#34;
+	width=&#34;3255&#34;
+	height=&#34;1778&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104618314_hu65b602d4980149a4af0049fdad318323_477339_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104618314&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;439px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第二步：点击要移除的曲面，点击&lt;code&gt;偏移&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515.png&#34;
+	width=&#34;3727&#34;
+	height=&#34;2088&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104837515_huf964af619a000ad19d61f86d4debee41_694229_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104837515&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第三步：选择&lt;code&gt;替换曲面特征&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941.png&#34;
+	width=&#34;443&#34;
+	height=&#34;389&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104910941_huab9a0665c9e35135c4c2aae40608d499_34741_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104910941&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;273px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;第四步：点击之前辅助爹基准面，即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541.png&#34;
+	width=&#34;3255&#34;
+	height=&#34;1778&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104938541_hu65b602d4980149a4af0049fdad318323_471757_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104938541&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;439px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;出现倒扣的问题&#34;&gt;出现倒扣的问题&lt;/h2&gt;
+&lt;p&gt;主要问题在于最开始做面的时候曲率没有全部在外面，不仅需要和分型面成90°，还需要把曲率进行调整。&lt;/p&gt;
+&lt;p&gt;错误的：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433.png&#34;
+	width=&#34;2293&#34;
+	height=&#34;764&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104322433_hu8c037d023fa415aec5da0f46ab74a236_16838_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104322433&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;300&#34;
+		data-flex-basis=&#34;720px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;正确的：&lt;img src=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789.png&#34;
+	width=&#34;2856&#34;
+	height=&#34;960&#34;
+	srcset=&#34;https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_480x0_resize_box_3.png 480w, https://bi1kbu.github.io/p/creo-surface-modeling/image-20230315104235789_huc2d12627fe1e1eb32cba6b1e49869a44_23122_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230315104235789&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;297&#34;
+		data-flex-basis=&#34;714px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>使用Github Pages部署上线Hugo博客</title>
         <link>https://bi1kbu.github.io/p/hugo-launch/</link>
         <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
