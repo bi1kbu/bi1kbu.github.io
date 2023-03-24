@@ -174,6 +174,43 @@
 &lt;h2 id=&#34;后续将本地生成的网页文件同步到仓库中的流程&#34;&gt;后续将本地生成的网页文件同步到仓库中的流程&lt;/h2&gt;
 &lt;h3 id=&#34;通过hugo构建网页&#34;&gt;通过Hugo构建网页&lt;/h3&gt;
 &lt;p&gt;在本地项目根目录打开&lt;code&gt;cmd&lt;/code&gt;并输入&lt;code&gt;hugo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/index.assets/image-20230324204417890.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230324204417890&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;将生成的文件复制到本地仓库&#34;&gt;将生成的文件复制到本地仓库&lt;/h3&gt;
+&lt;p&gt;生成的文件在根目录下public文件夹内，我的本地仓库也在里面，所以不需要复制，此步骤跳过。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/index.assets/image-20230324204540832.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230324204540832&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;添加文件到同步列表中&#34;&gt;添加文件到同步列表中&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;git add .&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bi1kbu.github.io/index.assets/image-20230324204813767.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20230324204813767&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;设置更新说明&#34;&gt;设置更新说明&lt;/h3&gt;
+&lt;p&gt;更新说明自定义，写在引号内。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git commit -m &amp;quot;blog v0.4 add new page&amp;quot;&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;报错及解决方案&#34;&gt;报错及解决方案&lt;/h2&gt;
 &lt;h3 id=&#34;生成密钥时报错&#34;&gt;生成密钥时报错&lt;/h3&gt;
 &lt;p&gt;报错内容：bash: ~ssh-keygen: command not found&lt;br&gt;
@@ -211,7 +248,13 @@ Start-Service sshd&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;}
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</description>
+&lt;/div&gt;&lt;h3 id=&#34;上传时报错&#34;&gt;上传时报错&lt;/h3&gt;
+&lt;p&gt;报错&lt;/p&gt;
+&lt;p&gt;​    error: failed to push some refs to &amp;lsquo;github.com:bi1kbu/bi1kbu.github.io.git&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;解决方案：从github仓库同步到本地&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git remote add origin git@github.com:bi1kbu/bi1kbu.github.io.git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;（记得将public文件夹内的文件重新复制过来）&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>关于</title>
