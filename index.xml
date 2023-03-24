@@ -211,6 +211,8 @@
 &lt;h3 id=&#34;设置更新说明&#34;&gt;设置更新说明&lt;/h3&gt;
 &lt;p&gt;更新说明自定义，写在引号内。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;git commit -m &amp;quot;blog v0.4 add new page&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;上传到github仓库&#34;&gt;上传到github仓库&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt; git push origin master&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&#34;报错及解决方案&#34;&gt;报错及解决方案&lt;/h2&gt;
 &lt;h3 id=&#34;生成密钥时报错&#34;&gt;生成密钥时报错&lt;/h3&gt;
 &lt;p&gt;报错内容：bash: ~ssh-keygen: command not found&lt;br&gt;
